@@ -4,13 +4,13 @@
 using namespace UC;
 
 
+namespace PyWidget_Common_Input { enum class EInputType : uint8; }
+
 namespace CameraShake_102472_Hit { class UCameraShake_102472_Hit_C; }
 
 namespace CameraShake_102472_Hit_0 { class UCameraShake_102472_Hit_C; }
 
 namespace MarvelAI { enum class ETargetType : uint8; }
-
-namespace PyWidget_Common_Input { enum class EInputType : uint8; }
 
 
 namespace Marvel
@@ -14950,6 +14950,13 @@ enum class ETemplateSectionPropertyScaleType {
     ETemplateSectionPropertyScaleType_MAX = 3,
 };
 
+enum class ESplineType {
+    BSpline = 0,
+    Hermite = 1,
+    Max = 2,
+    ESplineType_MAX = 3,
+};
+
 enum class EOscillatorWaveform {
     SineWave = 0,
     PerlinNoise = 1,
@@ -14989,13 +14996,6 @@ enum class EInitialWaveOscillatorOffsetType {
     Random = 0,
     Zero = 1,
     EInitialWaveOscillatorOffsetType_MAX = 2,
-};
-
-enum class ESplineType {
-    BSpline = 0,
-    Hermite = 1,
-    Max = 2,
-    ESplineType_MAX = 3,
 };
 
 enum class EWwiseLanguageRequirement {
@@ -22853,15 +22853,6 @@ enum class ETrainingState {
     ETrainingState_MAX = 4,
 };
 
-enum class EFilterRule {
-    Random = 0,
-    Farthest_Manhattan = 1,
-    Farthest_Euclidean = 2,
-    Nearest_Manhattan = 3,
-    Nearest_Euclidean = 4,
-    EFilterRule_MAX = 5,
-};
-
 enum class EAngle {
     UnKnow = 0,
     RightBottom = 1,
@@ -22883,6 +22874,15 @@ enum class EBindKillMethod {
     DirectKill = 2,
     DirectAndAssistKill = 3,
     EBindKillMethod_MAX = 4,
+};
+
+enum class EFilterRule {
+    Random = 0,
+    Farthest_Manhattan = 1,
+    Farthest_Euclidean = 2,
+    Nearest_Manhattan = 3,
+    Nearest_Euclidean = 4,
+    EFilterRule_MAX = 5,
 };
 
 enum class ECreditLevel {
