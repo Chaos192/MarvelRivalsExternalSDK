@@ -4,13 +4,13 @@
 using namespace UC;
 
 
-namespace PyWidget_Common_Input { enum class EInputType : uint8; }
-
-namespace CameraShake_102472_Hit { class UCameraShake_102472_Hit_C; }
+namespace MarvelAI { enum class ETargetType : uint8; }
 
 namespace CameraShake_102472_Hit_0 { class UCameraShake_102472_Hit_C; }
 
-namespace MarvelAI { enum class ETargetType : uint8; }
+namespace PyWidget_Common_Input { enum class EInputType : uint8; }
+
+namespace CameraShake_102472_Hit { class UCameraShake_102472_Hit_C; }
 
 
 namespace Marvel
@@ -11593,14 +11593,6 @@ enum class EPropertyPathTestEnum {
     EPropertyPathTestEnum_MAX = 4,
 };
 
-enum class EVideoState {
-    MarvelLogo = 0,
-    LoginLoop = 1,
-    Transition = 2,
-    LobbyLoop = 3,
-    EVideoState_MAX = 4,
-};
-
 enum class EAudioParameterType {
     None = 0,
     Boolean = 1,
@@ -11630,6 +11622,205 @@ enum class ETypedElementSelectionMethod {
     Primary = 0,
     Secondary = 1,
     ETypedElementSelectionMethod_MAX = 2,
+};
+
+enum class EOptimusGroomExecDomain {
+    None = 0,
+    ControlPoint = 1,
+    Curve = 2,
+    EOptimusGroomExecDomain_MAX = 3,
+};
+
+enum class EGroomCacheImportType {
+    None = 0,
+    Strands = 1,
+    Guides = 2,
+    All = 3,
+    EGroomCacheImportType_MAX = 4,
+};
+
+enum class EHairAtlasTextureType {
+    Depth = 0,
+    Tangent = 1,
+    Attribute = 2,
+    Coverage = 3,
+    AuxilaryData = 4,
+    Material = 5,
+    EHairAtlasTextureType_MAX = 6,
+};
+
+enum class EHairCardsClusterType {
+    Low = 0,
+    High = 1,
+    EHairCardsClusterType_MAX = 2,
+};
+
+enum class EHairCardsGenerationType {
+    CardsCount = 0,
+    UseGuides = 1,
+    EHairCardsGenerationType_MAX = 2,
+};
+
+enum class EHairCardsSourceType {
+    Procedural = 0,
+    Imported = 1,
+    EHairCardsSourceType_MAX = 2,
+};
+
+enum class EHairInterpolationQuality {
+    Low = 0,
+    Medium = 1,
+    High = 2,
+    Unknown = 3,
+    EHairInterpolationQuality_MAX = 4,
+};
+
+enum class EHairInterpolationWeight {
+    Parametric = 0,
+    Root = 1,
+    Index = 2,
+    Distance = 3,
+    Unknown = 4,
+    EHairInterpolationWeight_MAX = 5,
+};
+
+enum class EGroomGeometryType {
+    Strands = 0,
+    Cards = 1,
+    Meshes = 2,
+    EGroomGeometryType_MAX = 3,
+};
+
+enum class EGroomBindingType {
+    NoneBinding = 0,
+    Rigid = 1,
+    Skinning = 2,
+    EGroomBindingType_MAX = 3,
+};
+
+enum class EGroomOverrideType {
+    Auto = 0,
+    Enable = 1,
+    Disable = 2,
+    EGroomOverrideType_MAX = 3,
+};
+
+enum class EGroomGuideType {
+    Imported = 0,
+    Generated = 1,
+    Rigged = 2,
+    EGroomGuideType_MAX = 3,
+};
+
+enum class EGroomLODType {
+    Manual = 0,
+    Auto = 1,
+    EGroomLODType_MAX = 2,
+};
+
+enum class EGroomNiagaraSolvers {
+    None = 0,
+    CosseratRods = 2,
+    AngularSprings = 4,
+    CustomSolver = 8,
+    EGroomNiagaraSolvers_MAX = 9,
+};
+
+enum class EGroomStrandsSize {
+    None = 0,
+    Size2 = 2,
+    Size4 = 4,
+    Size8 = 8,
+    Size16 = 16,
+    Size32 = 32,
+    EGroomStrandsSize_MAX = 33,
+};
+
+enum class EGroomInterpolationType {
+    None = 0,
+    RigidTransform = 2,
+    OffsetTransform = 4,
+    SmoothTransform = 8,
+    EGroomInterpolationType_MAX = 9,
+};
+
+enum class EGroomBindingMeshType {
+    SkeletalMesh = 0,
+    GeometryCache = 1,
+    EGroomBindingMeshType_MAX = 2,
+};
+
+enum class EGroomCacheAttributes {
+    None = 0,
+    Position = 1,
+    Width = 2,
+    Color = 4,
+    PositionWidth = 3,
+    PositionColor = 5,
+    WidthColor = 5,
+    PositionWidthColor = 7,
+    EGroomCacheAttributes_MAX = 8,
+};
+
+enum class EGroomCacheType {
+    None = 0,
+    Strands = 1,
+    Guides = 2,
+    EGroomCacheType_MAX = 3,
+};
+
+enum class EGroomBasisType {
+    NoBasis = 0,
+    BezierBasis = 1,
+    BsplineBasis = 2,
+    CatmullromBasis = 3,
+    HermiteBasis = 4,
+    PowerBasis = 5,
+    EGroomBasisType_MAX = 6,
+};
+
+enum class EGroomCurveType {
+    Cubic = 0,
+    Linear = 1,
+    VariableOrder = 2,
+    EGroomCurveType_MAX = 3,
+};
+
+enum class EFollicleMaskChannel {
+    R = 0,
+    G = 1,
+    B = 2,
+    A = 3,
+    EFollicleMaskChannel_MAX = 4,
+};
+
+enum class EStrandsTexturesTraceType {
+    TraceInside = 0,
+    TraceOuside = 1,
+    TraceBidirectional = 2,
+    EStrandsTexturesTraceType_MAX = 3,
+};
+
+enum class EStrandsTexturesMeshType {
+    Static = 0,
+    Skeletal = 1,
+    EStrandsTexturesMeshType_MAX = 2,
+};
+
+enum class EGroomInterpolationQuality {
+    Low = 0,
+    Medium = 1,
+    High = 2,
+    Unknown = 3,
+    EGroomInterpolationQuality_MAX = 4,
+};
+
+enum class EGroomInterpolationWeight {
+    Parametric = 0,
+    Root = 1,
+    Index = 2,
+    Unknown = 3,
+    EGroomInterpolationWeight_MAX = 4,
 };
 
 enum class EDesiredImageFormat {
@@ -11959,15 +12150,6 @@ enum class EFrictionCombineMode {
     EFrictionCombineMode_MAX = 4,
 };
 
-enum class EEXRCompressionFormat {
-    None = 0,
-    PIZ = 1,
-    ZIP = 2,
-    DWAA = 3,
-    DWAB = 4,
-    EEXRCompressionFormat_MAX = 5,
-};
-
 enum class ELandscapeSetupErrors {
     LSE_None = 0,
     LSE_NoLandscapeInfo = 1,
@@ -12138,12 +12320,6 @@ enum class ELandscapeLODFalloff {
     Linear = 0,
     SquareRoot = 1,
     ELandscapeLODFalloff_MAX = 2,
-};
-
-enum class EStructUtilsResult {
-    Valid = 0,
-    NotValid = 1,
-    EStructUtilsResult_MAX = 2,
 };
 
 enum class EFrameNumberDisplayFormats {
@@ -12330,12 +12506,6 @@ enum class EClusterConnectionTypeEnum {
     Chaos_None = 5,
     Chaos_EClsuterCreationParameters_Max = 6,
     Chaos_MAX = 7,
-};
-
-enum class EChatCustomMsgType {
-    NONE = 0,
-    SURRENDER = 11,
-    EChatCustomMsgType_MAX = 12,
 };
 
 enum class ECollectionAttributeEnum {
@@ -12676,24 +12846,6 @@ enum class ERBFNormalizeMethod {
     ERBFNormalizeMethod_MAX = 4,
 };
 
-enum class ETentacleState103551 {
-    Default = 0,
-    Shooting = 1,
-    Grabbing = 2,
-    Breaking = 3,
-    ETentacleState103551_MAX = 4,
-};
-
-enum class ESymbiontScopeState {
-    Inactive = 0,
-    Spreading = 1,
-    StopSpread = 2,
-    Devouring = 3,
-    DevourTrace = 4,
-    StopDevour = 5,
-    ESymbiontScopeState_MAX = 6,
-};
-
 enum class EHandleEvent {
     LocalTransformUpdated = 0,
     GlobalTransformUpdated = 1,
@@ -12994,6 +13146,13 @@ enum class EMediaWebcamCaptureDeviceFilter {
     EMediaWebcamCaptureDeviceFilter_MAX = 9,
 };
 
+enum class ESurfaceColliderType {
+    Off = 0,
+    PUSH = 1,
+    PULL = 2,
+    SurfaceColliderType_MAX = 3,
+};
+
 enum class EMeshTrackerVertexColorMode {
     None = 0,
     Confidence = 1,
@@ -13006,17 +13165,6 @@ enum class EMoviePlaybackType {
     MT_Looped = 1,
     MT_LoadingLoop = 2,
     MT_MAX = 3,
-};
-
-enum class ERCBehaviourConditionType {
-    IsEqual = 0,
-    IsGreaterThan = 1,
-    IsLesserThan = 2,
-    IsGreaterThanOrEqualTo = 3,
-    IsLesserThanOrEqualTo = 4,
-    Else = 5,
-    None = 6,
-    ERCBehaviourConditionType_MAX = 7,
 };
 
 enum class EClothingWindMethod_Legacy {
@@ -14950,11 +15098,11 @@ enum class ETemplateSectionPropertyScaleType {
     ETemplateSectionPropertyScaleType_MAX = 3,
 };
 
-enum class ESplineType {
-    BSpline = 0,
-    Hermite = 1,
-    Max = 2,
-    ESplineType_MAX = 3,
+enum class EControlRigCurveMarvelAlignment {
+    Front = 0,
+    Stretched = 1,
+    Fibonacci = 2,
+    EControlRigCurveMarvelAlignment_MAX = 3,
 };
 
 enum class EOscillatorWaveform {
@@ -15477,6 +15625,29 @@ enum class ESharedRepConsiderType {
     Reconnect = 2,
     InitDormant = 3,
     ESharedRepConsiderType_MAX = 4,
+};
+
+enum class EMaterialXLuminanceMode {
+    ACEScg = 0,
+    Rec709 = 1,
+    Rec2020 = 2,
+    Rec2100 = 2,
+    Custom = 3,
+    EMaterialXLuminanceMode_MAX = 4,
+};
+
+enum class EMaterialXTextureSampleBlurFilter {
+    Box = 0,
+    Gaussian = 1,
+    EMaterialXTextureSampleBlurFilter_MAX = 2,
+};
+
+enum class EMAterialXTextureSampleBlurKernel {
+    Kernel1 = 0,
+    Kernel3 = 1,
+    Kernel5 = 2,
+    Kernel7 = 3,
+    EMAterialXTextureSampleBlurKernel_MAX = 4,
 };
 
 enum class ERigVMPinDirection {
@@ -16110,6 +16281,21 @@ enum class EClientState {
     EClientState_MAX = 5,
 };
 
+enum class EMisterFantasticState {
+    Default = 0,
+    Normal = 1,
+    Expand = 3,
+    EMisterFantasticState_MAX = 4,
+};
+
+enum class EComboState_104011 {
+    None = 0,
+    Left = 1,
+    Right = 2,
+    Double = 3,
+    EComboState_MAX = 4,
+};
+
 enum class EBuildTrigger {
     OnEdit = 0,
     Manual = 1,
@@ -16260,6 +16446,24 @@ enum class EDatasmithCADRetessellationRule {
     All = 0,
     SkipDeletedSurfaces = 1,
     EDatasmithCADRetessellationRule_MAX = 2,
+};
+
+enum class ETentacleState103551 {
+    Default = 0,
+    Shooting = 1,
+    Grabbing = 2,
+    Breaking = 3,
+    ETentacleState103551_MAX = 4,
+};
+
+enum class ESymbiontScopeState {
+    Inactive = 0,
+    Spreading = 1,
+    StopSpread = 2,
+    Devouring = 3,
+    DevourTrace = 4,
+    StopDevour = 5,
+    ESymbiontScopeState_MAX = 6,
 };
 
 enum class EGizmoElementState {
@@ -16448,6 +16652,12 @@ enum class ESceneSnapQueryTargetType {
     Grid = 4,
     All = 7,
     ESceneSnapQueryTargetType_MAX = 8,
+};
+
+enum class EChatCustomMsgType {
+    NONE = 0,
+    SURRENDER = 11,
+    EChatCustomMsgType_MAX = 12,
 };
 
 enum class EImpactDamageOverride {
@@ -17372,6 +17582,12 @@ enum class ENNETensorDataType {
     ENNETensorDataType_MAX = 17,
 };
 
+enum class EAbilityEndStage_105071 {
+    OnMontageEnd = 1,
+    OnFieldEndTask = 2,
+    EAbilityEndStage_MAX = 3,
+};
+
 enum class ELiveLinkCameraProjectionMode {
     Perspective = 0,
     Orthographic = 1,
@@ -17454,13 +17670,6 @@ enum class EOpenColorIOViewTransformDirection {
     Forward = 0,
     Inverse = 1,
     EOpenColorIOViewTransformDirection_MAX = 2,
-};
-
-enum class ECollectionScriptingShareType {
-    Local = 0,
-    Private = 1,
-    Shared = 2,
-    ECollectionScriptingShareType_MAX = 3,
 };
 
 enum class EMediaIOCoreSourceEncoding {
@@ -17661,70 +17870,377 @@ enum class ELiveLinkAxis {
     ELiveLinkAxis_MAX = 6,
 };
 
+enum class ESynth1OscType {
+    Sine = 0,
+    Saw = 1,
+    Triangle = 2,
+    Square = 3,
+    Noise = 4,
+    Count = 5,
+    ESynth1OscType_MAX = 6,
+};
+
+enum class ESynthLFOType {
+    Sine = 0,
+    UpSaw = 1,
+    DownSaw = 2,
+    Square = 3,
+    Triangle = 4,
+    Exponential = 5,
+    RandomSampleHold = 6,
+    Count = 7,
+    ESynthLFOType_MAX = 8,
+};
+
+enum class ESynthLFOMode {
+    Sync = 0,
+    OneShot = 1,
+    Free = 2,
+    Count = 3,
+    ESynthLFOMode_MAX = 4,
+};
+
+enum class ESynthLFOPatchType {
+    PatchToNone = 0,
+    PatchToGain = 1,
+    PatchToOscFreq = 2,
+    PatchToFilterFreq = 3,
+    PatchToFilterQ = 4,
+    PatchToOscPulseWidth = 5,
+    PatchToOscPan = 6,
+    PatchLFO1ToLFO2Frequency = 7,
+    PatchLFO1ToLFO2Gain = 8,
+    Count = 9,
+    ESynthLFOPatchType_MAX = 10,
+};
+
+enum class ESynthModEnvPatch {
+    PatchToNone = 0,
+    PatchToOscFreq = 1,
+    PatchToFilterFreq = 2,
+    PatchToFilterQ = 3,
+    PatchToLFO1Gain = 4,
+    PatchToLFO2Gain = 5,
+    PatchToLFO1Freq = 6,
+    PatchToLFO2Freq = 7,
+    Count = 8,
+    ESynthModEnvPatch_MAX = 9,
+};
+
+enum class ESynthModEnvBiasPatch {
+    PatchToNone = 0,
+    PatchToOscFreq = 1,
+    PatchToFilterFreq = 2,
+    PatchToFilterQ = 3,
+    PatchToLFO1Gain = 4,
+    PatchToLFO2Gain = 5,
+    PatchToLFO1Freq = 6,
+    PatchToLFO2Freq = 7,
+    Count = 8,
+    ESynthModEnvBiasPatch_MAX = 9,
+};
+
+enum class ESynthFilterType {
+    LowPass = 0,
+    HighPass = 1,
+    BandPass = 2,
+    BandStop = 3,
+    Count = 4,
+    ESynthFilterType_MAX = 5,
+};
+
+enum class ESynthFilterAlgorithm {
+    OnePole = 0,
+    StateVariable = 1,
+    Ladder = 2,
+    Count = 3,
+    ESynthFilterAlgorithm_MAX = 4,
+};
+
+enum class ESynthStereoDelayMode {
+    Normal = 0,
+    Cross = 1,
+    PingPong = 2,
+    Count = 3,
+    ESynthStereoDelayMode_MAX = 4,
+};
+
+enum class ESynth1PatchSource {
+    LFO1 = 0,
+    LFO2 = 1,
+    Envelope = 2,
+    BiasEnvelope = 3,
+    Count = 4,
+    ESynth1PatchSource_MAX = 5,
+};
+
+enum class ESynth1PatchDestination {
+    Osc1Gain = 0,
+    Osc1Frequency = 1,
+    Osc1Pulsewidth = 2,
+    Osc2Gain = 3,
+    Osc2Frequency = 4,
+    Osc2Pulsewidth = 5,
+    FilterFrequency = 6,
+    FilterQ = 7,
+    Gain = 8,
+    Pan = 9,
+    LFO1Frequency = 10,
+    LFO1Gain = 11,
+    LFO2Frequency = 12,
+    LFO2Gain = 13,
+    Count = 14,
+    ESynth1PatchDestination_MAX = 15,
+};
+
+enum class ESubmixEffectConvolutionReverbBlockSize {
+    BlockSize256 = 0,
+    BlockSize512 = 1,
+    BlockSize1024 = 2,
+    ESubmixEffectConvolutionReverbBlockSize_MAX = 3,
+};
+
+enum class ESourceEffectDynamicsProcessorType {
+    Compressor = 0,
+    Limiter = 1,
+    Expander = 2,
+    Gate = 3,
+    UpwardsCompressor = 4,
+    Count = 5,
+    ESourceEffectDynamicsProcessorType_MAX = 6,
+};
+
+enum class ESourceEffectDynamicsPeakMode {
+    MeanSquared = 0,
+    RootMeanSquared = 1,
+    Peak = 2,
+    Count = 3,
+    ESourceEffectDynamicsPeakMode_MAX = 4,
+};
+
+enum class EEnvelopeFollowerPeakMode {
+    MeanSquared = 0,
+    RootMeanSquared = 1,
+    Peak = 2,
+    Count = 3,
+    EEnvelopeFollowerPeakMode_MAX = 4,
+};
+
+enum class ESourceEffectFilterCircuit {
+    OnePole = 0,
+    StateVariable = 1,
+    Ladder = 2,
+    Count = 3,
+    ESourceEffectFilterCircuit_MAX = 4,
+};
+
+enum class ESourceEffectFilterType {
+    LowPass = 0,
+    HighPass = 1,
+    BandPass = 2,
+    BandStop = 3,
+    Count = 4,
+    ESourceEffectFilterType_MAX = 5,
+};
+
+enum class ESourceEffectFilterParam {
+    FilterFrequency = 0,
+    FilterResonance = 1,
+    Count = 2,
+    ESourceEffectFilterParam_MAX = 3,
+};
+
+enum class EStereoChannelMode {
+    MidSide = 0,
+    LeftRight = 1,
+    count = 2,
+    EStereoChannelMode_MAX = 3,
+};
+
+enum class ESourceEffectMotionFilterModSource {
+    DistanceFromListener = 0,
+    SpeedRelativeToListener = 1,
+    SpeedOfSourceEmitter = 2,
+    SpeedOfListener = 3,
+    SpeedOfAngleDelta = 4,
+    Count = 5,
+    ESourceEffectMotionFilterModSource_MAX = 6,
+};
+
+enum class ESourceEffectMotionFilterModDestination {
+    FilterACutoffFrequency = 0,
+    FilterAResonance = 1,
+    FilterAOutputVolumeDB = 2,
+    FilterBCutoffFrequency = 3,
+    FilterBResonance = 4,
+    FilterBOutputVolumeDB = 5,
+    FilterMix = 6,
+    Count = 7,
+    ESourceEffectMotionFilterModDestination_MAX = 8,
+};
+
+enum class ESourceEffectMotionFilterTopology {
+    SerialMode = 0,
+    ParallelMode = 1,
+    Count = 2,
+    ESourceEffectMotionFilterTopology_MAX = 3,
+};
+
+enum class ESourceEffectMotionFilterCircuit {
+    OnePole = 0,
+    StateVariable = 1,
+    Ladder = 2,
+    Count = 3,
+    ESourceEffectMotionFilterCircuit_MAX = 4,
+};
+
+enum class ESourceEffectMotionFilterType {
+    LowPass = 0,
+    HighPass = 1,
+    BandPass = 2,
+    BandStop = 3,
+    Count = 4,
+    ESourceEffectMotionFilterType_MAX = 5,
+};
+
+enum class EPhaserLFOType {
+    Sine = 0,
+    UpSaw = 1,
+    DownSaw = 2,
+    Square = 3,
+    Triangle = 4,
+    Exponential = 5,
+    RandomSampleHold = 6,
+    Count = 7,
+    EPhaserLFOType_MAX = 8,
+};
+
+enum class ERingModulatorTypeSourceEffect {
+    Sine = 0,
+    Saw = 1,
+    Triangle = 2,
+    Square = 3,
+    Count = 4,
+    ERingModulatorTypeSourceEffect_MAX = 5,
+};
+
+enum class EStereoDelaySourceEffect {
+    Normal = 0,
+    Cross = 1,
+    PingPong = 2,
+    Count = 3,
+    EStereoDelaySourceEffect_MAX = 4,
+};
+
+enum class EStereoDelayFiltertype {
+    Lowpass = 0,
+    Highpass = 1,
+    Bandpass = 2,
+    Notch = 3,
+    Count = 4,
+    EStereoDelayFiltertype_MAX = 5,
+};
+
+enum class ESubmixFilterType {
+    LowPass = 0,
+    HighPass = 1,
+    BandPass = 2,
+    BandStop = 3,
+    Count = 4,
+    ESubmixFilterType_MAX = 5,
+};
+
+enum class ESubmixFilterAlgorithm {
+    OnePole = 0,
+    StateVariable = 1,
+    Ladder = 2,
+    Count = 3,
+    ESubmixFilterAlgorithm_MAX = 4,
+};
+
+enum class ETapLineMode {
+    SendToChannel = 0,
+    Panning = 1,
+    Disabled = 2,
+    ETapLineMode_MAX = 3,
+};
+
+enum class EGranularSynthEnvelopeType {
+    Rectangular = 0,
+    Triangle = 1,
+    DownwardTriangle = 2,
+    UpwardTriangle = 3,
+    ExponentialDecay = 4,
+    ExponentialIncrease = 5,
+    Gaussian = 6,
+    Hanning = 7,
+    Lanczos = 8,
+    Cosine = 9,
+    CosineSquared = 10,
+    Welch = 11,
+    Blackman = 12,
+    BlackmanHarris = 13,
+    Count = 14,
+    EGranularSynthEnvelopeType_MAX = 15,
+};
+
+enum class EGranularSynthSeekType {
+    FromBeginning = 0,
+    FromCurrentPosition = 1,
+    Count = 2,
+    EGranularSynthSeekType_MAX = 3,
+};
+
+enum class ECurveInterpolationType {
+    AUTOINTERP = 0,
+    LINEAR = 1,
+    CONSTANT = 2,
+    CurveInterpolationType_MAX = 3,
+};
+
+enum class ESamplePlayerSeekType {
+    FromBeginning = 0,
+    FromCurrentPosition = 1,
+    FromEnd = 2,
+    Count = 3,
+    ESamplePlayerSeekType_MAX = 4,
+};
+
+enum class ESynthKnobSize {
+    Medium = 0,
+    Large = 1,
+    Count = 2,
+    ESynthKnobSize_MAX = 3,
+};
+
+enum class ESynthSlateSizeType {
+    Small = 0,
+    Medium = 1,
+    Large = 2,
+    Count = 3,
+    ESynthSlateSizeType_MAX = 4,
+};
+
+enum class ESynthSlateColorStyle {
+    Light = 0,
+    Dark = 1,
+    Count = 2,
+    ESynthSlateColorStyle_MAX = 3,
+};
+
+enum class EBindKillMethod {
+    NONE = 0,
+    AssistKill = 1,
+    DirectKill = 2,
+    DirectAndAssistKill = 3,
+    EBindKillMethod_MAX = 4,
+};
+
 enum class EDecalKey {
     Deactivate = 0,
     FadeIn = 1,
     FadeOut = 2,
     EDecalKey_MAX = 3,
-};
-
-enum class EPlaceEvent_101861 {
-    Place_TryPlace = 0,
-    Place_Generate = 1,
-    Place_Remove = 2,
-    Place_None = 3,
-    Place_MAX = 4,
-};
-
-enum class EAbilityState101841 {
-    Inactive = 0,
-    ForeSwing = 1,
-    BarrierActive = 2,
-    BackSwing = 3,
-    EAbilityState101841_MAX = 4,
-};
-
-enum class EAbilityEvent_101861 {
-    View_Char2CameraActor = 0,
-    View_CameraActor2Char = 1,
-    View_MAX = 2,
-};
-
-enum class EInputEvent_101861 {
-    SpeedUp = 0,
-    SpeedDown = 1,
-    Rise = 2,
-    RiseOver = 3,
-    Drop = 4,
-    DropOver = 5,
-    None = 6,
-    EInputEvent_MAX = 7,
-};
-
-enum class EAbilityState_101881 {
-    NoEnergy = 0,
-    Common = 1,
-    SlowDecreasing = 2,
-    WaitDecreasing = 3,
-    FastDecreasing = 4,
-    EAbilityState_MAX = 5,
-};
-
-enum class EAbilityIncreaseType_101881 {
-    OnActivated = 0,
-    OnCommited = 1,
-    OnMissile = 2,
-    OnHit = 3,
-    OnApplyDamage = 4,
-    EAbilityIncreaseType_MAX = 5,
-};
-
-enum class ECueAbilityState_101881 {
-    Close = 0,
-    Opening = 1,
-    Open = 2,
-    Closing = 3,
-    ECueAbilityState_MAX = 4,
 };
 
 enum class EComputeKernelFlags {
@@ -17860,205 +18376,6 @@ enum class EOptimusNodePinDirection {
     EOptimusNodePinDirection_MAX = 3,
 };
 
-enum class EOptimusGroomExecDomain {
-    None = 0,
-    ControlPoint = 1,
-    Curve = 2,
-    EOptimusGroomExecDomain_MAX = 3,
-};
-
-enum class EGroomCacheImportType {
-    None = 0,
-    Strands = 1,
-    Guides = 2,
-    All = 3,
-    EGroomCacheImportType_MAX = 4,
-};
-
-enum class EHairAtlasTextureType {
-    Depth = 0,
-    Tangent = 1,
-    Attribute = 2,
-    Coverage = 3,
-    AuxilaryData = 4,
-    Material = 5,
-    EHairAtlasTextureType_MAX = 6,
-};
-
-enum class EHairCardsClusterType {
-    Low = 0,
-    High = 1,
-    EHairCardsClusterType_MAX = 2,
-};
-
-enum class EHairCardsGenerationType {
-    CardsCount = 0,
-    UseGuides = 1,
-    EHairCardsGenerationType_MAX = 2,
-};
-
-enum class EHairCardsSourceType {
-    Procedural = 0,
-    Imported = 1,
-    EHairCardsSourceType_MAX = 2,
-};
-
-enum class EHairInterpolationQuality {
-    Low = 0,
-    Medium = 1,
-    High = 2,
-    Unknown = 3,
-    EHairInterpolationQuality_MAX = 4,
-};
-
-enum class EHairInterpolationWeight {
-    Parametric = 0,
-    Root = 1,
-    Index = 2,
-    Distance = 3,
-    Unknown = 4,
-    EHairInterpolationWeight_MAX = 5,
-};
-
-enum class EGroomGeometryType {
-    Strands = 0,
-    Cards = 1,
-    Meshes = 2,
-    EGroomGeometryType_MAX = 3,
-};
-
-enum class EGroomBindingType {
-    NoneBinding = 0,
-    Rigid = 1,
-    Skinning = 2,
-    EGroomBindingType_MAX = 3,
-};
-
-enum class EGroomOverrideType {
-    Auto = 0,
-    Enable = 1,
-    Disable = 2,
-    EGroomOverrideType_MAX = 3,
-};
-
-enum class EGroomGuideType {
-    Imported = 0,
-    Generated = 1,
-    Rigged = 2,
-    EGroomGuideType_MAX = 3,
-};
-
-enum class EGroomLODType {
-    Manual = 0,
-    Auto = 1,
-    EGroomLODType_MAX = 2,
-};
-
-enum class EGroomNiagaraSolvers {
-    None = 0,
-    CosseratRods = 2,
-    AngularSprings = 4,
-    CustomSolver = 8,
-    EGroomNiagaraSolvers_MAX = 9,
-};
-
-enum class EGroomStrandsSize {
-    None = 0,
-    Size2 = 2,
-    Size4 = 4,
-    Size8 = 8,
-    Size16 = 16,
-    Size32 = 32,
-    EGroomStrandsSize_MAX = 33,
-};
-
-enum class EGroomInterpolationType {
-    None = 0,
-    RigidTransform = 2,
-    OffsetTransform = 4,
-    SmoothTransform = 8,
-    EGroomInterpolationType_MAX = 9,
-};
-
-enum class EGroomBindingMeshType {
-    SkeletalMesh = 0,
-    GeometryCache = 1,
-    EGroomBindingMeshType_MAX = 2,
-};
-
-enum class EGroomCacheAttributes {
-    None = 0,
-    Position = 1,
-    Width = 2,
-    Color = 4,
-    PositionWidth = 3,
-    PositionColor = 5,
-    WidthColor = 5,
-    PositionWidthColor = 7,
-    EGroomCacheAttributes_MAX = 8,
-};
-
-enum class EGroomCacheType {
-    None = 0,
-    Strands = 1,
-    Guides = 2,
-    EGroomCacheType_MAX = 3,
-};
-
-enum class EGroomBasisType {
-    NoBasis = 0,
-    BezierBasis = 1,
-    BsplineBasis = 2,
-    CatmullromBasis = 3,
-    HermiteBasis = 4,
-    PowerBasis = 5,
-    EGroomBasisType_MAX = 6,
-};
-
-enum class EGroomCurveType {
-    Cubic = 0,
-    Linear = 1,
-    VariableOrder = 2,
-    EGroomCurveType_MAX = 3,
-};
-
-enum class EFollicleMaskChannel {
-    R = 0,
-    G = 1,
-    B = 2,
-    A = 3,
-    EFollicleMaskChannel_MAX = 4,
-};
-
-enum class EStrandsTexturesTraceType {
-    TraceInside = 0,
-    TraceOuside = 1,
-    TraceBidirectional = 2,
-    EStrandsTexturesTraceType_MAX = 3,
-};
-
-enum class EStrandsTexturesMeshType {
-    Static = 0,
-    Skeletal = 1,
-    EStrandsTexturesMeshType_MAX = 2,
-};
-
-enum class EGroomInterpolationQuality {
-    Low = 0,
-    Medium = 1,
-    High = 2,
-    Unknown = 3,
-    EGroomInterpolationQuality_MAX = 4,
-};
-
-enum class EGroomInterpolationWeight {
-    Parametric = 0,
-    Root = 1,
-    Index = 2,
-    Unknown = 3,
-    EGroomInterpolationWeight_MAX = 4,
-};
-
 enum class EMovieGraphValueType {
     None = 0,
     Bool = 1,
@@ -18139,6 +18456,15 @@ enum class EMoviePipelineShutterTiming {
     EMoviePipelineShutterTiming_MAX = 3,
 };
 
+enum class EEXRCompressionFormat {
+    None = 0,
+    PIZ = 1,
+    ZIP = 2,
+    DWAA = 3,
+    DWAB = 4,
+    EEXRCompressionFormat_MAX = 5,
+};
+
 enum class ESequenceTimeUnit {
     DisplayRate = 0,
     TickResolution = 1,
@@ -18169,6 +18495,12 @@ enum class ETodTrackType {
     Material_Scaler = 5,
     Material_Color = 6,
     ETodTrackType_MAX = 7,
+};
+
+enum class EStructUtilsResult {
+    Valid = 0,
+    NotValid = 1,
+    EStructUtilsResult_MAX = 2,
 };
 
 enum class EFFXFSR3QualityMode {
@@ -18755,13 +19087,6 @@ enum class EXPBDComplianceType {
     Muscle = 5,
     Fat = 6,
     EXPBDComplianceType_MAX = 7,
-};
-
-enum class ESurfaceColliderType {
-    Off = 0,
-    PUSH = 1,
-    PULL = 2,
-    SurfaceColliderType_MAX = 3,
 };
 
 enum class ECurveType {
@@ -20178,6 +20503,17 @@ enum class ERCBindingStatus {
     ERCBindingStatus_MAX = 3,
 };
 
+enum class ERCBehaviourConditionType {
+    IsEqual = 0,
+    IsGreaterThan = 1,
+    IsLesserThan = 2,
+    IsGreaterThanOrEqualTo = 3,
+    IsLesserThanOrEqualTo = 4,
+    Else = 5,
+    None = 6,
+    ERCBehaviourConditionType_MAX = 7,
+};
+
 enum class ERemoteControlEvent {
     PreObjectPropertyChanged = 0,
     ObjectPropertyChanged = 1,
@@ -20436,29 +20772,6 @@ enum class EInterchangeSkeletalMeshContentType {
     MAX = 3,
 };
 
-enum class EMaterialXLuminanceMode {
-    ACEScg = 0,
-    Rec709 = 1,
-    Rec2020 = 2,
-    Rec2100 = 2,
-    Custom = 3,
-    EMaterialXLuminanceMode_MAX = 4,
-};
-
-enum class EMaterialXTextureSampleBlurFilter {
-    Box = 0,
-    Gaussian = 1,
-    EMaterialXTextureSampleBlurFilter_MAX = 2,
-};
-
-enum class EMAterialXTextureSampleBlurKernel {
-    Kernel1 = 0,
-    Kernel3 = 1,
-    Kernel5 = 2,
-    Kernel7 = 3,
-    EMAterialXTextureSampleBlurKernel_MAX = 4,
-};
-
 enum class EInterchangeForceMeshType {
     IFMT_None = 0,
     IFMT_StaticMesh = 1,
@@ -20513,6 +20826,13 @@ enum class EUdpMessageFormat {
     CborPlatformEndianness = 3,
     CborStandardEndianness = 4,
     EUdpMessageFormat_MAX = 5,
+};
+
+enum class ECollectionScriptingShareType {
+    Local = 0,
+    Private = 1,
+    Shared = 2,
+    ECollectionScriptingShareType_MAX = 3,
 };
 
 enum class ELocationAccuracy {
@@ -20581,364 +20901,6 @@ enum class EResonanceRenderMode {
     BinauralHighQuality = 3,
     RoomEffectsOnly = 4,
     EResonanceRenderMode_MAX = 5,
-};
-
-enum class ESynth1OscType {
-    Sine = 0,
-    Saw = 1,
-    Triangle = 2,
-    Square = 3,
-    Noise = 4,
-    Count = 5,
-    ESynth1OscType_MAX = 6,
-};
-
-enum class ESynthLFOType {
-    Sine = 0,
-    UpSaw = 1,
-    DownSaw = 2,
-    Square = 3,
-    Triangle = 4,
-    Exponential = 5,
-    RandomSampleHold = 6,
-    Count = 7,
-    ESynthLFOType_MAX = 8,
-};
-
-enum class ESynthLFOMode {
-    Sync = 0,
-    OneShot = 1,
-    Free = 2,
-    Count = 3,
-    ESynthLFOMode_MAX = 4,
-};
-
-enum class ESynthLFOPatchType {
-    PatchToNone = 0,
-    PatchToGain = 1,
-    PatchToOscFreq = 2,
-    PatchToFilterFreq = 3,
-    PatchToFilterQ = 4,
-    PatchToOscPulseWidth = 5,
-    PatchToOscPan = 6,
-    PatchLFO1ToLFO2Frequency = 7,
-    PatchLFO1ToLFO2Gain = 8,
-    Count = 9,
-    ESynthLFOPatchType_MAX = 10,
-};
-
-enum class ESynthModEnvPatch {
-    PatchToNone = 0,
-    PatchToOscFreq = 1,
-    PatchToFilterFreq = 2,
-    PatchToFilterQ = 3,
-    PatchToLFO1Gain = 4,
-    PatchToLFO2Gain = 5,
-    PatchToLFO1Freq = 6,
-    PatchToLFO2Freq = 7,
-    Count = 8,
-    ESynthModEnvPatch_MAX = 9,
-};
-
-enum class ESynthModEnvBiasPatch {
-    PatchToNone = 0,
-    PatchToOscFreq = 1,
-    PatchToFilterFreq = 2,
-    PatchToFilterQ = 3,
-    PatchToLFO1Gain = 4,
-    PatchToLFO2Gain = 5,
-    PatchToLFO1Freq = 6,
-    PatchToLFO2Freq = 7,
-    Count = 8,
-    ESynthModEnvBiasPatch_MAX = 9,
-};
-
-enum class ESynthFilterType {
-    LowPass = 0,
-    HighPass = 1,
-    BandPass = 2,
-    BandStop = 3,
-    Count = 4,
-    ESynthFilterType_MAX = 5,
-};
-
-enum class ESynthFilterAlgorithm {
-    OnePole = 0,
-    StateVariable = 1,
-    Ladder = 2,
-    Count = 3,
-    ESynthFilterAlgorithm_MAX = 4,
-};
-
-enum class ESynthStereoDelayMode {
-    Normal = 0,
-    Cross = 1,
-    PingPong = 2,
-    Count = 3,
-    ESynthStereoDelayMode_MAX = 4,
-};
-
-enum class ESynth1PatchSource {
-    LFO1 = 0,
-    LFO2 = 1,
-    Envelope = 2,
-    BiasEnvelope = 3,
-    Count = 4,
-    ESynth1PatchSource_MAX = 5,
-};
-
-enum class ESynth1PatchDestination {
-    Osc1Gain = 0,
-    Osc1Frequency = 1,
-    Osc1Pulsewidth = 2,
-    Osc2Gain = 3,
-    Osc2Frequency = 4,
-    Osc2Pulsewidth = 5,
-    FilterFrequency = 6,
-    FilterQ = 7,
-    Gain = 8,
-    Pan = 9,
-    LFO1Frequency = 10,
-    LFO1Gain = 11,
-    LFO2Frequency = 12,
-    LFO2Gain = 13,
-    Count = 14,
-    ESynth1PatchDestination_MAX = 15,
-};
-
-enum class ESubmixEffectConvolutionReverbBlockSize {
-    BlockSize256 = 0,
-    BlockSize512 = 1,
-    BlockSize1024 = 2,
-    ESubmixEffectConvolutionReverbBlockSize_MAX = 3,
-};
-
-enum class ESourceEffectDynamicsProcessorType {
-    Compressor = 0,
-    Limiter = 1,
-    Expander = 2,
-    Gate = 3,
-    UpwardsCompressor = 4,
-    Count = 5,
-    ESourceEffectDynamicsProcessorType_MAX = 6,
-};
-
-enum class ESourceEffectDynamicsPeakMode {
-    MeanSquared = 0,
-    RootMeanSquared = 1,
-    Peak = 2,
-    Count = 3,
-    ESourceEffectDynamicsPeakMode_MAX = 4,
-};
-
-enum class EEnvelopeFollowerPeakMode {
-    MeanSquared = 0,
-    RootMeanSquared = 1,
-    Peak = 2,
-    Count = 3,
-    EEnvelopeFollowerPeakMode_MAX = 4,
-};
-
-enum class ESourceEffectFilterCircuit {
-    OnePole = 0,
-    StateVariable = 1,
-    Ladder = 2,
-    Count = 3,
-    ESourceEffectFilterCircuit_MAX = 4,
-};
-
-enum class ESourceEffectFilterType {
-    LowPass = 0,
-    HighPass = 1,
-    BandPass = 2,
-    BandStop = 3,
-    Count = 4,
-    ESourceEffectFilterType_MAX = 5,
-};
-
-enum class ESourceEffectFilterParam {
-    FilterFrequency = 0,
-    FilterResonance = 1,
-    Count = 2,
-    ESourceEffectFilterParam_MAX = 3,
-};
-
-enum class EStereoChannelMode {
-    MidSide = 0,
-    LeftRight = 1,
-    count = 2,
-    EStereoChannelMode_MAX = 3,
-};
-
-enum class ESourceEffectMotionFilterModSource {
-    DistanceFromListener = 0,
-    SpeedRelativeToListener = 1,
-    SpeedOfSourceEmitter = 2,
-    SpeedOfListener = 3,
-    SpeedOfAngleDelta = 4,
-    Count = 5,
-    ESourceEffectMotionFilterModSource_MAX = 6,
-};
-
-enum class ESourceEffectMotionFilterModDestination {
-    FilterACutoffFrequency = 0,
-    FilterAResonance = 1,
-    FilterAOutputVolumeDB = 2,
-    FilterBCutoffFrequency = 3,
-    FilterBResonance = 4,
-    FilterBOutputVolumeDB = 5,
-    FilterMix = 6,
-    Count = 7,
-    ESourceEffectMotionFilterModDestination_MAX = 8,
-};
-
-enum class ESourceEffectMotionFilterTopology {
-    SerialMode = 0,
-    ParallelMode = 1,
-    Count = 2,
-    ESourceEffectMotionFilterTopology_MAX = 3,
-};
-
-enum class ESourceEffectMotionFilterCircuit {
-    OnePole = 0,
-    StateVariable = 1,
-    Ladder = 2,
-    Count = 3,
-    ESourceEffectMotionFilterCircuit_MAX = 4,
-};
-
-enum class ESourceEffectMotionFilterType {
-    LowPass = 0,
-    HighPass = 1,
-    BandPass = 2,
-    BandStop = 3,
-    Count = 4,
-    ESourceEffectMotionFilterType_MAX = 5,
-};
-
-enum class EPhaserLFOType {
-    Sine = 0,
-    UpSaw = 1,
-    DownSaw = 2,
-    Square = 3,
-    Triangle = 4,
-    Exponential = 5,
-    RandomSampleHold = 6,
-    Count = 7,
-    EPhaserLFOType_MAX = 8,
-};
-
-enum class ERingModulatorTypeSourceEffect {
-    Sine = 0,
-    Saw = 1,
-    Triangle = 2,
-    Square = 3,
-    Count = 4,
-    ERingModulatorTypeSourceEffect_MAX = 5,
-};
-
-enum class EStereoDelaySourceEffect {
-    Normal = 0,
-    Cross = 1,
-    PingPong = 2,
-    Count = 3,
-    EStereoDelaySourceEffect_MAX = 4,
-};
-
-enum class EStereoDelayFiltertype {
-    Lowpass = 0,
-    Highpass = 1,
-    Bandpass = 2,
-    Notch = 3,
-    Count = 4,
-    EStereoDelayFiltertype_MAX = 5,
-};
-
-enum class ESubmixFilterType {
-    LowPass = 0,
-    HighPass = 1,
-    BandPass = 2,
-    BandStop = 3,
-    Count = 4,
-    ESubmixFilterType_MAX = 5,
-};
-
-enum class ESubmixFilterAlgorithm {
-    OnePole = 0,
-    StateVariable = 1,
-    Ladder = 2,
-    Count = 3,
-    ESubmixFilterAlgorithm_MAX = 4,
-};
-
-enum class ETapLineMode {
-    SendToChannel = 0,
-    Panning = 1,
-    Disabled = 2,
-    ETapLineMode_MAX = 3,
-};
-
-enum class EGranularSynthEnvelopeType {
-    Rectangular = 0,
-    Triangle = 1,
-    DownwardTriangle = 2,
-    UpwardTriangle = 3,
-    ExponentialDecay = 4,
-    ExponentialIncrease = 5,
-    Gaussian = 6,
-    Hanning = 7,
-    Lanczos = 8,
-    Cosine = 9,
-    CosineSquared = 10,
-    Welch = 11,
-    Blackman = 12,
-    BlackmanHarris = 13,
-    Count = 14,
-    EGranularSynthEnvelopeType_MAX = 15,
-};
-
-enum class EGranularSynthSeekType {
-    FromBeginning = 0,
-    FromCurrentPosition = 1,
-    Count = 2,
-    EGranularSynthSeekType_MAX = 3,
-};
-
-enum class ECurveInterpolationType {
-    AUTOINTERP = 0,
-    LINEAR = 1,
-    CONSTANT = 2,
-    CurveInterpolationType_MAX = 3,
-};
-
-enum class ESamplePlayerSeekType {
-    FromBeginning = 0,
-    FromCurrentPosition = 1,
-    FromEnd = 2,
-    Count = 3,
-    ESamplePlayerSeekType_MAX = 4,
-};
-
-enum class ESynthKnobSize {
-    Medium = 0,
-    Large = 1,
-    Count = 2,
-    ESynthKnobSize_MAX = 3,
-};
-
-enum class ESynthSlateSizeType {
-    Small = 0,
-    Medium = 1,
-    Large = 2,
-    Count = 3,
-    ESynthSlateSizeType_MAX = 4,
-};
-
-enum class ESynthSlateColorStyle {
-    Light = 0,
-    Dark = 1,
-    Count = 2,
-    ESynthSlateColorStyle_MAX = 3,
 };
 
 enum class EConstantQNormalizationEnum {
@@ -21132,26 +21094,70 @@ enum class EStormCameraState {
     EStormCameraState_MAX = 8,
 };
 
-enum class EMisterFantasticState {
-    Default = 0,
-    Normal = 1,
-    Expand = 3,
-    EMisterFantasticState_MAX = 4,
-};
-
-enum class EComboState_104011 {
-    None = 0,
-    Left = 1,
-    Right = 2,
-    Double = 3,
-    EComboState_MAX = 4,
-};
-
 enum class EAbilityState_101651 {
     Position = 0,
     Run = 1,
     Invisiable = 2,
     EAbilityState_MAX = 3,
+};
+
+enum class EPlaceEvent_101861 {
+    Place_TryPlace = 0,
+    Place_Generate = 1,
+    Place_Remove = 2,
+    Place_None = 3,
+    Place_MAX = 4,
+};
+
+enum class EAbilityState101841 {
+    Inactive = 0,
+    ForeSwing = 1,
+    BarrierActive = 2,
+    BackSwing = 3,
+    EAbilityState101841_MAX = 4,
+};
+
+enum class EAbilityEvent_101861 {
+    View_Char2CameraActor = 0,
+    View_CameraActor2Char = 1,
+    View_MAX = 2,
+};
+
+enum class EInputEvent_101861 {
+    SpeedUp = 0,
+    SpeedDown = 1,
+    Rise = 2,
+    RiseOver = 3,
+    Drop = 4,
+    DropOver = 5,
+    None = 6,
+    EInputEvent_MAX = 7,
+};
+
+enum class EAbilityState_101881 {
+    NoEnergy = 0,
+    Common = 1,
+    SlowDecreasing = 2,
+    WaitDecreasing = 3,
+    FastDecreasing = 4,
+    EAbilityState_MAX = 5,
+};
+
+enum class EAbilityIncreaseType_101881 {
+    OnActivated = 0,
+    OnCommited = 1,
+    OnMissile = 2,
+    OnHit = 3,
+    OnApplyDamage = 4,
+    EAbilityIncreaseType_MAX = 5,
+};
+
+enum class ECueAbilityState_101881 {
+    Close = 0,
+    Opening = 1,
+    Open = 2,
+    Closing = 3,
+    ECueAbilityState_MAX = 4,
 };
 
 enum class EHawkeyeArrowType {
@@ -21712,6 +21718,18 @@ enum class EScopeEnableType_105071 {
     Type_MAX = 3,
 };
 
+enum class EHttpReplayResult {
+    Success = 0,
+    FailedJsonParse = 1,
+    DataUnavailable = 2,
+    InvalidHttpResponse = 3,
+    CompressionFailed = 4,
+    DecompressionFailed = 5,
+    InvalidPayload = 6,
+    Unknown = 7,
+    EHttpReplayResult_MAX = 8,
+};
+
 enum class EAttrCompareType {
     Equal = 0,
     LessThan = 1,
@@ -22101,18 +22119,6 @@ enum class ELocalFileReplayResult {
     ELocalFileReplayResult_MAX = 12,
 };
 
-enum class EHttpReplayResult {
-    Success = 0,
-    FailedJsonParse = 1,
-    DataUnavailable = 2,
-    InvalidHttpResponse = 3,
-    CompressionFailed = 4,
-    DecompressionFailed = 5,
-    InvalidPayload = 6,
-    Unknown = 7,
-    EHttpReplayResult_MAX = 8,
-};
-
 enum class EVectorVMBaseTypes {
     Float = 0,
     Int = 1,
@@ -22188,13 +22194,6 @@ enum class EBrushBlendType {
     EBrushBlendType_MAX = 4,
 };
 
-enum class EControlRigCurveMarvelAlignment {
-    Front = 0,
-    Stretched = 1,
-    Fibonacci = 2,
-    EControlRigCurveMarvelAlignment_MAX = 3,
-};
-
 enum class EFootPlacementLockType {
     Unlocked = 0,
     PivotAroundBall = 1,
@@ -22223,6 +22222,13 @@ enum class EOffsetRootBoneMode {
     Hold = 2,
     Release = 3,
     EOffsetRootBoneMode_MAX = 4,
+};
+
+enum class ESplineType {
+    BSpline = 0,
+    Hermite = 1,
+    Max = 2,
+    ESplineType_MAX = 3,
 };
 
 enum class EInterchangeCurveInterpMode {
@@ -22853,38 +22859,6 @@ enum class ETrainingState {
     ETrainingState_MAX = 4,
 };
 
-enum class EAngle {
-    UnKnow = 0,
-    RightBottom = 1,
-    LeftTop = 2,
-    LeftBottom = 3,
-    RightTop = 4,
-    EAngle_MAX = 5,
-};
-
-enum class EAbilityEndStage_105071 {
-    OnMontageEnd = 1,
-    OnFieldEndTask = 2,
-    EAbilityEndStage_MAX = 3,
-};
-
-enum class EBindKillMethod {
-    NONE = 0,
-    AssistKill = 1,
-    DirectKill = 2,
-    DirectAndAssistKill = 3,
-    EBindKillMethod_MAX = 4,
-};
-
-enum class EFilterRule {
-    Random = 0,
-    Farthest_Manhattan = 1,
-    Farthest_Euclidean = 2,
-    Nearest_Manhattan = 3,
-    Nearest_Euclidean = 4,
-    EFilterRule_MAX = 5,
-};
-
 enum class ECreditLevel {
     DISHONORABLE = 0,
     QUESTIONABLE = 1,
@@ -22917,11 +22891,48 @@ enum class PyWidget_Common_InputEInputType {
     EInputType_MAX = 3,
 };
 
+enum class EFilterRule {
+    Random = 0,
+    Farthest_Manhattan = 1,
+    Farthest_Euclidean = 2,
+    Nearest_Manhattan = 3,
+    Nearest_Euclidean = 4,
+    EFilterRule_MAX = 5,
+};
+
 enum class EBTD_GameModeType {
     Control = 0,
     Escort = 1,
     Hybrid = 2,
     ArcadeDeath = 3,
     EBTD_MAX = 4,
+};
+
+enum class EVideoState {
+    MarvelLogo = 0,
+    LoginLoop = 1,
+    Transition = 2,
+    LobbyLoop = 3,
+    EVideoState_MAX = 4,
+};
+
+enum class EAngle {
+    UnKnow = 0,
+    RightBottom = 1,
+    LeftTop = 2,
+    LeftBottom = 3,
+    RightTop = 4,
+    EAngle_MAX = 5,
+};
+
+enum class Enum_Common_BtnStyle {
+    NewEnumerator0 = 0,
+    NewEnumerator1 = 1,
+    NewEnumerator2 = 2,
+    NewEnumerator3 = 3,
+    NewEnumerator4 = 4,
+    NewEnumerator5 = 5,
+    NewEnumerator6 = 6,
+    Enum_Common_MAX = 7,
 };
 
