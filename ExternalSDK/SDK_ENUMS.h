@@ -4,14 +4,20 @@
 using namespace UC;
 
 
-namespace CameraShake_102472_Hit { class UCameraShake_102472_Hit_C; }
-
 namespace CameraShake_102472_Hit_0 { class UCameraShake_102472_Hit_C; }
+
+namespace CameraShake_102472_Hit { class UCameraShake_102472_Hit_C; }
 
 namespace PyWidget_Common_Input { enum class EInputType : uint8; }
 
 namespace MarvelAI { enum class ETargetType : uint8; }
 
+
+namespace WP_Common_SpiderWeb_ShowAnimBP_Medium
+{
+	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
+}
 
 namespace ShowAnim_LinkedAnimBP
 {
@@ -19,7 +25,7 @@ namespace ShowAnim_LinkedAnimBP
 	struct FAnimBlueprintGeneratedMutableData;
 }
 
-namespace ShowAnimBaseBP
+namespace WP_1029001_Weapon_ShowAnimBP
 {
 	struct FAnimBlueprintGeneratedConstantData;
 	struct FAnimBlueprintGeneratedMutableData;
@@ -31,16 +37,10 @@ namespace One029001_ShowAnimBP
 	struct FAnimBlueprintGeneratedConstantData;
 }
 
-namespace WP_Common_SpiderWeb_ShowAnimBP_Medium
+namespace ShowAnimBaseBP
 {
-	struct FAnimBlueprintGeneratedConstantData;
 	struct FAnimBlueprintGeneratedMutableData;
-}
-
-namespace WP_1029001_Weapon_ShowAnimBP
-{
 	struct FAnimBlueprintGeneratedConstantData;
-	struct FAnimBlueprintGeneratedMutableData;
 }
 
 namespace Marvel
@@ -11784,14 +11784,6 @@ enum class ETypedElementSelectionMethod {
     ETypedElementSelectionMethod_MAX = 2,
 };
 
-enum class ETrainingState {
-    Pending = 0,
-    Prepareing = 1,
-    Training = 2,
-    Result = 3,
-    ETrainingState_MAX = 4,
-};
-
 enum class EDesiredImageFormat {
     PNG = 0,
     JPG = 1,
@@ -12312,12 +12304,6 @@ enum class ETimedDataInputState {
     Unresponsive = 1,
     Disconnected = 2,
     ETimedDataInputState_MAX = 3,
-};
-
-enum class EStructUtilsResult {
-    Valid = 0,
-    NotValid = 1,
-    EStructUtilsResult_MAX = 2,
 };
 
 enum class EMovieSceneKeyInterpolation {
@@ -13165,51 +13151,10 @@ enum class EClothingWindMethodNv {
     EClothingWindMethodNv_MAX = 2,
 };
 
-enum class EAbilityStatus_104981 {
+enum class EChatCustomMsgType {
     NONE = 0,
-    Raising = 1,
-    WaitingToConfirm = 2,
-    Dashing = 3,
-    EndState = 4,
-    CollideKnockDown = 5,
-    EAbilityStatus_MAX = 6,
-};
-
-enum class ERushState_104951 {
-    Start_104951 = 0,
-    Loop_104951 = 1,
-    End_104951 = 2,
-    None_104951 = 3,
-    ERushState_MAX = 4,
-};
-
-enum class EWolverineSynergyState {
-    FlyingToTarget = 0,
-    FlyingToTargetFailed = 1,
-    AttachToTarget = 2,
-    DetachFromTarget = 3,
-    NoCoop = 4,
-    EWolverineSynergyState_MAX = 5,
-};
-
-enum class EBindReduceCDMethod_104901 {
-    JoinKill = 0,
-    DirectKill = 1,
-    EBindReduceCDMethod_MAX = 2,
-};
-
-enum class ERushState_104971 {
-    Start_104971 = 0,
-    Loop_104971 = 1,
-    End_104971 = 2,
-    None_104971 = 3,
-    ERushState_MAX = 4,
-};
-
-enum class ETriggerSpecialLeftTime {
-    OnActivated = 0,
-    OnEnterEndState = 1,
-    ETriggerSpecialLeftTime_MAX = 2,
+    SURRENDER = 11,
+    EChatCustomMsgType_MAX = 12,
 };
 
 enum class EProcMeshSliceCapOption {
@@ -13270,38 +13215,6 @@ enum class EFNiagaraCompileEventSource {
     Unset = 0,
     ScriptDependency = 1,
     FNiagaraCompileEventSource_MAX = 2,
-};
-
-enum class EIronRecoverType {
-    NatualRecover = 0,
-    ShieldRecover = 1,
-    PhysicsSummonerRecover = 2,
-    None = 3,
-    EIronRecoverType_MAX = 4,
-};
-
-enum class ESplineCueStatus_103701 {
-    Start = 0,
-    Loop = 1,
-    None = 2,
-    ESplineCueStatus_MAX = 3,
-};
-
-enum class EManipulateActorType {
-    None = 0,
-    Entity = 1,
-    MagicEntity = 2,
-    MagicNoEntity = 3,
-    FastFalling = 4,
-    EManipulateActorType_MAX = 5,
-};
-
-enum class ERingState {
-    StateIdle = 0,
-    StateOne = 1,
-    StateTwo = 2,
-    StateFull = 3,
-    ERingState_MAX = 4,
 };
 
 enum class ETriggerFXType {
@@ -14200,6 +14113,105 @@ enum class EVolumeCacheType {
     EVolumeCacheType_MAX = 1,
 };
 
+enum class ERotateAudioControl {
+    INIT = 0,
+    PLAY_START_AUDIO = 1,
+    PLAY_LOOP_AUDIO = 2,
+    STOP_LOOP_AUDIO = 3,
+    ERotateAudioControl_MAX = 4,
+};
+
+enum class EHealthStatus {
+    StronglyHealthy = 0,
+    SlightlyHurt = 1,
+    BadlyWounded = 2,
+    AlmostDying = 3,
+    Initial = 4,
+    EHealthStatus_MAX = 5,
+};
+
+enum class EVisibleStatus {
+    Initial = 0,
+    Obscured = 1,
+    Visible = 2,
+    EVisibleStatus_MAX = 3,
+};
+
+enum class EZiplineLaunchState {
+    Initial = 0,
+    Launching = 1,
+    Hooked = 2,
+    Deprecated = 3,
+    EZiplineLaunchState_MAX = 4,
+};
+
+enum class EZiplineLaunchResult {
+    Unknown = 0,
+    Success = 1,
+    Fail_NoPlaceToSetup = 2,
+    Fail_DistanceTooClose = 3,
+    Fail_DistanceTooFar = 4,
+    Fail_UnhookableSlope = 5,
+    Fail_UnhookableType = 6,
+    EZiplineLaunchResult_MAX = 7,
+};
+
+enum class EZiplineSlideDirection {
+    Forward = 0,
+    Backward = 1,
+    EZiplineSlideDirection_MAX = 2,
+};
+
+enum class EZiplineSlideState {
+    Idle = 0,
+    Sliding = 1,
+    Hanging = 2,
+    EZiplineSlideState_MAX = 3,
+};
+
+enum class EAbilityStage_101451 {
+    Inactive = 0,
+    Foreswing = 1,
+    Launching = 2,
+    Backswing = 3,
+    EAbilityStage_MAX = 4,
+};
+
+enum class EAbilityStage_101452 {
+    Inactive = 0,
+    Foreswing = 1,
+    Sliding = 2,
+    Hanging = 3,
+    Backswing = 4,
+    EAbilityStage_MAX = 5,
+};
+
+enum class EPunisherSlideFinishResult {
+    ReachEnd = 0,
+    PressJump = 1,
+    Cancelled = 2,
+    Collision = 3,
+    EPunisherSlideFinishResult_MAX = 4,
+};
+
+enum class EState_101481 {
+    Normal = 0,
+    Entering = 1,
+    EnteringEquip = 2,
+    Entered = 3,
+    Outing = 4,
+    OutingUnEquip = 5,
+    Finish = 6,
+    EState_MAX = 7,
+};
+
+enum class EState_101482 {
+    InActive = 0,
+    Active = 1,
+    ActiveBreak = 2,
+    EState_MAX = 3,
+};
+
 enum class EPlayerMappableKeySlot {
     First = 0,
     Second = 1,
@@ -14356,25 +14368,6 @@ enum class EPropertyBagMissingEnum {
     EPropertyBagMissingEnum_MAX = 1,
 };
 
-enum class EPhysicsControlType {
-    WorldSpace = 0,
-    ParentSpace = 1,
-    EPhysicsControlType_MAX = 2,
-};
-
-enum class EResetToCachedTargetBehavior {
-    ResetImmediately = 0,
-    ResetDuringUpdateControls = 1,
-    EResetToCachedTargetBehavior_MAX = 2,
-};
-
-enum class EPhysicsMovementType {
-    Static = 0,
-    Kinematic = 1,
-    Simulated = 2,
-    EPhysicsMovementType_MAX = 3,
-};
-
 enum class ECommonInputType {
     MouseAndKeyboard = 0,
     Gamepad = 1,
@@ -14437,6 +14430,50 @@ enum class ETransitionCurve {
     CubicOut = 5,
     CubicInOut = 6,
     ETransitionCurve_MAX = 7,
+};
+
+enum class EVideoState {
+    MarvelLogo = 0,
+    LoginLoop = 1,
+    Transition = 2,
+    LobbyLoop = 3,
+    EVideoState_MAX = 4,
+};
+
+enum class EInterchangeForceMeshType {
+    IFMT_None = 0,
+    IFMT_StaticMesh = 1,
+    IFMT_SkeletalMesh = 2,
+    IFMT_MAX = 3,
+};
+
+enum class EInterchangeVertexColorImportOption {
+    IVCIO_Replace = 0,
+    IVCIO_Ignore = 1,
+    IVCIO_Override = 2,
+    IVCIO_MAX = 3,
+};
+
+enum class EInterchangeMaterialXShaders {
+    StandardSurface = 0,
+    StandardSurfaceTransmission = 1,
+    SurfaceUnlit = 2,
+    UsdPreviewSurface = 3,
+    MaxShaderCount = 4,
+    EInterchangeMaterialXShaders_MAX = 5,
+};
+
+enum class EInterchangeAnimationRange {
+    Timeline = 0,
+    Animated = 1,
+    SetRange = 2,
+    MAX = 3,
+};
+
+enum class EInterchangeMaterialImportOption {
+    ImportAsMaterials = 0,
+    ImportAsMaterialInstances = 1,
+    EInterchangeMaterialImportOption_MAX = 2,
 };
 
 enum class ETaskResourceOverlapPolicy {
@@ -15053,6 +15090,13 @@ enum class EDataRegistryAvailability {
     EDataRegistryAvailability_MAX = 6,
 };
 
+enum class EInterchangeSkeletalMeshContentType {
+    All = 0,
+    Geometry = 1,
+    SkinningWeights = 2,
+    MAX = 3,
+};
+
 enum class ECacheMode {
     None = 0,
     Play = 1,
@@ -15148,6 +15192,76 @@ enum class ELocationZToSpawnEnum {
     ChaosNiagara_LocationZToSpawn_MinMax = 3,
     ChaosNiagara_Max = 4,
     ChaosNiagara_Max_0 = 5,
+};
+
+enum class ESpawnState {
+    Inactive = 0,
+    Flying = 1,
+    Active = 2,
+    PreSpawn = 3,
+    Spawning = 4,
+    SpawnFinished = 5,
+    SpawnAborted = 6,
+    Disappearing = 7,
+    ESpawnState_MAX = 8,
+};
+
+enum class ERacoonGrootAbilityState {
+    FlyingToGroot = 0,
+    FlyingToGrootFailed = 1,
+    AttachToGroot = 2,
+    DetachFromGroot = 3,
+    NoCoop = 4,
+    ERacoonGrootAbilityState_MAX = 5,
+};
+
+enum class EState_10232201 {
+    Hit = 0,
+    Bounce = 1,
+    Normal = 2,
+    EState_MAX = 3,
+};
+
+enum class ESummonedType_102341 {
+    ArmorPack = 0,
+    RocketBoots = 1,
+    ESummonedType_MAX = 2,
+};
+
+enum class ERacoonGrootAttachLockCameraYawState {
+    NoLock = 0,
+    LockOnAttach = 1,
+    LockOnFire = 2,
+    ERacoonGrootAttachLockCameraYawState_MAX = 3,
+};
+
+enum class ERacoonGrootLockCameraYawTarget {
+    Raccoon = 0,
+    Groot = 1,
+    ERacoonGrootLockCameraYawTarget_MAX = 2,
+};
+
+enum class ERushState_102331 {
+    None = 0,
+    Start = 1,
+    End = 2,
+    ERushState_MAX = 3,
+};
+
+enum class EWallRunSide {
+    Unknown = 0,
+    Left = 1,
+    Right = 2,
+    Free = 3,
+    EWallRunSide_MAX = 4,
+};
+
+enum class EWallRunCapsuleShape {
+    Unknown = 0,
+    Sphered = 1,
+    Capsuling = 2,
+    Capsuled = 3,
+    EWallRunCapsuleShape_MAX = 4,
 };
 
 enum class EActorSequenceObjectReferenceType {
@@ -15970,33 +16084,6 @@ enum class ERigVMSimPointIntegrateType {
     Verlet = 0,
     SemiExplicitEuler = 1,
     ERigVMSimPointIntegrateType_MAX = 2,
-};
-
-enum class EChaosWeightMapTarget {
-    None = 0,
-    MaxDistance = 1,
-    BackstopDistance = 2,
-    BackstopRadius = 3,
-    AnimDriveStiffness = 4,
-    AnimDriveDamping = 5,
-    TetherStiffness = 6,
-    TetherScale = 7,
-    Drag = 8,
-    Lift = 9,
-    EdgeStiffness = 10,
-    BendingStiffness = 11,
-    AreaStiffness = 12,
-    BucklingStiffness = 13,
-    Pressure = 14,
-    EChaosWeightMapTarget_MAX = 15,
-};
-
-enum class EChaosClothTetherMode {
-    FastTetherFastLength = 0,
-    AccurateTetherFastLength = 1,
-    AccurateTetherAccurateLength = 2,
-    MaxChaosClothTetherMode = 3,
-    EChaosClothTetherMode_MAX = 4,
 };
 
 enum class ERigElementType {
@@ -17496,6 +17583,130 @@ enum class EWayPointMark {
     EWayPointMark_MAX = 2,
 };
 
+enum class EBakeTextureResolution {
+    Resolution16 = 16,
+    Resolution32 = 32,
+    Resolution64 = 64,
+    Resolution128 = 128,
+    Resolution256 = 256,
+    Resolution512 = 512,
+    Resolution1024 = 1024,
+    Resolution2048 = 2048,
+    Resolution4096 = 4096,
+    Resolution8192 = 8192,
+    EBakeTextureResolution_MAX = 8193,
+};
+
+enum class EBakeTextureBitDepth {
+    ChannelBits8 = 0,
+    ChannelBits16 = 1,
+    EBakeTextureBitDepth_MAX = 2,
+};
+
+enum class EBakeTextureSamplesPerPixel {
+    Sample1 = 1,
+    Sample4 = 4,
+    Sample16 = 16,
+    Sample64 = 64,
+    Sample256 = 256,
+    EBakeTextureSamplesPerPixel_MAX = 257,
+};
+
+enum class EGeometrySelectionElementType {
+    Vertex = 1,
+    Edge = 2,
+    Face = 4,
+    EGeometrySelectionElementType_MAX = 5,
+};
+
+enum class EGeometrySelectionTopologyType {
+    Triangle = 1,
+    Polygroup = 2,
+    EGeometrySelectionTopologyType_MAX = 3,
+};
+
+enum class EBaseCreateFromSelectedTargetType {
+    NewObject = 0,
+    FirstInputObject = 1,
+    LastInputObject = 2,
+    EBaseCreateFromSelectedTargetType_MAX = 3,
+};
+
+enum class EUVLayoutPreviewSide {
+    Left = 0,
+    Right = 1,
+    EUVLayoutPreviewSide_MAX = 2,
+};
+
+enum class ESpaceCurveControlPointTransformMode {
+    Shared = 0,
+    PerVertex = 1,
+    ESpaceCurveControlPointTransformMode_MAX = 2,
+};
+
+enum class ESpaceCurveControlPointOriginMode {
+    Shared = 0,
+    First = 1,
+    Last = 2,
+    ESpaceCurveControlPointOriginMode_MAX = 3,
+};
+
+enum class ESpaceCurveControlPointFalloffType {
+    Linear = 0,
+    Smooth = 1,
+    ESpaceCurveControlPointFalloffType_MAX = 2,
+};
+
+enum class EModelingComponentsPlaneVisualizationMode {
+    SimpleGrid = 0,
+    HierarchicalGrid = 1,
+    FixedScreenAreaGrid = 2,
+    EModelingComponentsPlaneVisualizationMode_MAX = 3,
+};
+
+enum class ECreateModelingObjectResult {
+    Ok = 0,
+    Cancelled = 1,
+    Failed_Unknown = 2,
+    Failed_NoAPIFound = 3,
+    Failed_InvalidWorld = 4,
+    Failed_InvalidMesh = 5,
+    Failed_InvalidTexture = 6,
+    Failed_AssetCreationFailed = 7,
+    Failed_ActorCreationFailed = 8,
+    Failed_InvalidMaterial = 9,
+    ECreateModelingObjectResult_MAX = 10,
+};
+
+enum class ECreateMeshObjectSourceMeshType {
+    MeshDescription = 0,
+    DynamicMesh = 1,
+    ECreateMeshObjectSourceMeshType_MAX = 2,
+};
+
+enum class ECreateObjectTypeHint {
+    Undefined = 0,
+    StaticMesh = 1,
+    Volume = 2,
+    DynamicMeshActor = 3,
+    ECreateObjectTypeHint_MAX = 4,
+};
+
+enum class EHandleSourcesMethod {
+    DeleteSources = 0,
+    HideSources = 1,
+    KeepSources = 2,
+    KeepFirstSource = 3,
+    KeepLastSource = 4,
+    EHandleSourcesMethod_MAX = 5,
+};
+
+enum class EMultiTransformerMode {
+    DefaultGizmo = 1,
+    QuickAxisTranslation = 2,
+    EMultiTransformerMode_MAX = 3,
+};
+
 enum class ENiagaraArrayFloatType {
     None = 0,
     Float = 1,
@@ -17562,446 +17773,6 @@ enum class ESynergyWavingState {
     ESynergyWavingState_MAX = 4,
 };
 
-enum class EGeometryScriptOutcomePins {
-    Failure = 0,
-    Success = 1,
-    EGeometryScriptOutcomePins_MAX = 2,
-};
-
-enum class EGeometryScriptSearchOutcomePins {
-    Found = 0,
-    NotFound = 1,
-    EGeometryScriptSearchOutcomePins_MAX = 2,
-};
-
-enum class EGeometryScriptContainmentOutcomePins {
-    Inside = 0,
-    Outside = 1,
-    EGeometryScriptContainmentOutcomePins_MAX = 2,
-};
-
-enum class EGeometryScriptLODType {
-    MaxAvailable = 0,
-    HiResSourceModel = 1,
-    SourceModel = 2,
-    RenderData = 3,
-    EGeometryScriptLODType_MAX = 4,
-};
-
-enum class EGeometryScriptAxis {
-    X = 0,
-    Y = 1,
-    Z = 2,
-    EGeometryScriptAxis_MAX = 3,
-};
-
-enum class EGeometryScriptIndexType {
-    Any = 0,
-    Triangle = 1,
-    Vertex = 2,
-    MaterialID = 3,
-    PolygroupID = 4,
-    EGeometryScriptIndexType_MAX = 5,
-};
-
-enum class EGeometryScriptDebugMessageType {
-    ErrorMessage = 0,
-    WarningMessage = 1,
-    EGeometryScriptDebugMessageType_MAX = 2,
-};
-
-enum class EGeometryScriptErrorType {
-    NoError = 0,
-    UnknownError = 1,
-    InvalidInputs = 2,
-    OperationFailed = 3,
-    EGeometryScriptErrorType_MAX = 4,
-};
-
-enum class EGeometryScriptCollisionGenerationMethod {
-    AlignedBoxes = 0,
-    OrientedBoxes = 1,
-    MinimalSpheres = 2,
-    Capsules = 3,
-    ConvexHulls = 4,
-    SweptHulls = 5,
-    MinVolumeShapes = 6,
-    EGeometryScriptCollisionGenerationMethod_MAX = 7,
-};
-
-enum class EGeometryScriptSweptHullAxis {
-    X = 0,
-    Y = 1,
-    Z = 2,
-    SmallestBoxDimension = 3,
-    SmallestVolume = 4,
-    EGeometryScriptSweptHullAxis_MAX = 5,
-};
-
-enum class EGeometryScriptMeshSelectionType {
-    Vertices = 0,
-    Triangles = 1,
-    Polygroups = 2,
-    EGeometryScriptMeshSelectionType_MAX = 3,
-};
-
-enum class EGeometryScriptMeshSelectionConversionType {
-    NoConversion = 0,
-    ToVertices = 1,
-    ToTriangles = 2,
-    ToPolygroups = 3,
-    EGeometryScriptMeshSelectionConversionType_MAX = 4,
-};
-
-enum class EGeometryScriptCombineSelectionMode {
-    Add = 0,
-    Subtract = 1,
-    Intersection = 2,
-    EGeometryScriptCombineSelectionMode_MAX = 3,
-};
-
-enum class EGeometryScriptEmptySelectionBehavior {
-    FullMeshSelection = 0,
-    EmptySelection = 1,
-    EGeometryScriptEmptySelectionBehavior_MAX = 2,
-};
-
-enum class EGeometryScriptBakeResolution {
-    Resolution16 = 0,
-    Resolution32 = 1,
-    Resolution64 = 2,
-    Resolution128 = 3,
-    Resolution256 = 4,
-    Resolution512 = 5,
-    Resolution1024 = 6,
-    Resolution2048 = 7,
-    Resolution4096 = 8,
-    Resolution8192 = 9,
-    EGeometryScriptBakeResolution_MAX = 10,
-};
-
-enum class EGeometryScriptBakeBitDepth {
-    ChannelBits8 = 0,
-    ChannelBits16 = 1,
-    EGeometryScriptBakeBitDepth_MAX = 2,
-};
-
-enum class EGeometryScriptBakeSamplesPerPixel {
-    Sample1 = 0,
-    Sample4 = 1,
-    Sample16 = 2,
-    Sample64 = 3,
-    Samples256 = 4,
-    EGeometryScriptBakeSamplesPerPixel_MAX = 5,
-};
-
-enum class EGeometryScriptBakeFilteringType {
-    BSpline = 0,
-    Box = 1,
-    EGeometryScriptBakeFilteringType_MAX = 2,
-};
-
-enum class EGeometryScriptBakeTypes {
-    TangentSpaceNormal = 0,
-    ObjectSpaceNormal = 1,
-    FaceNormal = 2,
-    BentNormal = 3,
-    Position = 4,
-    Curvature = 5,
-    AmbientOcclusion = 6,
-    Texture = 7,
-    MultiTexture = 8,
-    VertexColor = 9,
-    MaterialID = 10,
-    EGeometryScriptBakeTypes_MAX = 11,
-};
-
-enum class EGeometryScriptBakeOutputMode {
-    RGBA = 0,
-    PerChannel = 1,
-    EGeometryScriptBakeOutputMode_MAX = 2,
-};
-
-enum class EGeometryScriptBakeNormalSpace {
-    Tangent = 0,
-    Object = 1,
-    EGeometryScriptBakeNormalSpace_MAX = 2,
-};
-
-enum class EGeometryScriptBakeCurvatureTypeMode {
-    Mean = 0,
-    Max = 1,
-    Min = 2,
-    Gaussian = 3,
-    EGeometryScriptBakeCurvatureTypeMode_MAX = 4,
-};
-
-enum class EGeometryScriptBakeCurvatureColorMode {
-    Grayscale = 0,
-    RedBlue = 1,
-    RedGreenBlue = 2,
-    EGeometryScriptBakeCurvatureColorMode_MAX = 3,
-};
-
-enum class EGeometryScriptBakeCurvatureClampMode {
-    None = 0,
-    OnlyPositive = 1,
-    OnlyNegative = 2,
-    EGeometryScriptBakeCurvatureClampMode_MAX = 3,
-};
-
-enum class EGeometryScriptCombineAttributesMode {
-    EnableAllMatching = 0,
-    UseTarget = 1,
-    UseSource = 2,
-    EGeometryScriptCombineAttributesMode_MAX = 3,
-};
-
-enum class EGeometryScriptSmoothBoneWeightsType {
-    DirectDistance = 0,
-    GeodesicVoxel = 1,
-    EGeometryScriptSmoothBoneWeightsType_MAX = 2,
-};
-
-enum class ETransferBoneWeightsMethod {
-    ClosestPointOnSurface = 0,
-    InpaintWeights = 1,
-    ETransferBoneWeightsMethod_MAX = 2,
-};
-
-enum class EOutputTargetMeshBones {
-    SourceBones = 0,
-    TargetBones = 1,
-    EOutputTargetMeshBones_MAX = 2,
-};
-
-enum class EGeometryScriptBooleanOperation {
-    Union = 0,
-    Intersection = 1,
-    Subtract = 2,
-    EGeometryScriptBooleanOperation_MAX = 3,
-};
-
-enum class EGeometryScriptFlareType {
-    SinMode = 0,
-    SinSquaredMode = 1,
-    TriangleMode = 2,
-    EGeometryScriptFlareType_MAX = 3,
-};
-
-enum class EGeometryScriptMathWarpType {
-    SinWave1D = 0,
-    SinWave2D = 1,
-    SinWave3D = 2,
-    EGeometryScriptMathWarpType_MAX = 3,
-};
-
-enum class EGeometryScriptMeshEditPolygroupMode {
-    PreserveExisting = 0,
-    AutoGenerateNew = 1,
-    SetConstant = 2,
-    EGeometryScriptMeshEditPolygroupMode_MAX = 3,
-};
-
-enum class EGeometryScriptPolyOperationArea {
-    EntireSelection = 0,
-    PerPolygroup = 1,
-    PerTriangle = 2,
-    EGeometryScriptPolyOperationArea_MAX = 3,
-};
-
-enum class EGeometryScriptLinearExtrudeDirection {
-    FixedDirection = 0,
-    AverageFaceNormal = 1,
-    EGeometryScriptLinearExtrudeDirection_MAX = 2,
-};
-
-enum class EGeometryScriptOffsetFacesType {
-    VertexNormal = 0,
-    FaceNormal = 1,
-    ParallelFaceOffset = 2,
-    EGeometryScriptOffsetFacesType_MAX = 3,
-};
-
-enum class EGeometryScriptMeshBevelSelectionMode {
-    TriangleArea = 0,
-    AllPolygroupEdges = 1,
-    SharedPolygroupEdges = 2,
-    EGeometryScriptMeshBevelSelectionMode_MAX = 3,
-};
-
-enum class EGeometryScriptTangentTypes {
-    FastMikkT = 0,
-    PerTriangle = 1,
-    EGeometryScriptTangentTypes_MAX = 2,
-};
-
-enum class EGeometryScriptPrimitivePolygroupMode {
-    SingleGroup = 0,
-    PerFace = 1,
-    PerQuad = 2,
-    EGeometryScriptPrimitivePolygroupMode_MAX = 3,
-};
-
-enum class EGeometryScriptPrimitiveOriginMode {
-    Center = 0,
-    Base = 1,
-    EGeometryScriptPrimitiveOriginMode_MAX = 2,
-};
-
-enum class EGeometryScriptPrimitiveUVMode {
-    Uniform = 0,
-    ScaleToFill = 1,
-    EGeometryScriptPrimitiveUVMode_MAX = 2,
-};
-
-enum class EGeometryScriptPolygonFillMode {
-    All = 0,
-    Solid = 1,
-    PositiveWinding = 2,
-    NonZeroWinding = 3,
-    NegativeWinding = 4,
-    OddWinding = 5,
-    EGeometryScriptPolygonFillMode_MAX = 6,
-};
-
-enum class EGeometryScriptUniformRemeshTargetType {
-    TriangleCount = 0,
-    TargetEdgeLength = 1,
-    EGeometryScriptUniformRemeshTargetType_MAX = 2,
-};
-
-enum class EGeometryScriptRemeshEdgeConstraintType {
-    Fixed = 0,
-    Refine = 1,
-    Free = 2,
-    Ignore = 3,
-    EGeometryScriptRemeshEdgeConstraintType_MAX = 4,
-};
-
-enum class EGeometryScriptRemeshSmoothingType {
-    Uniform = 0,
-    UVPreserving = 1,
-    Mixed = 2,
-    EGeometryScriptRemeshSmoothingType_MAX = 3,
-};
-
-enum class EGeometryScriptFillHolesMethod {
-    Automatic = 0,
-    MinimalFill = 1,
-    PolygonTriangulation = 2,
-    TriangleFan = 3,
-    PlanarProjection = 4,
-    EGeometryScriptFillHolesMethod_MAX = 5,
-};
-
-enum class EGeometryScriptRemoveHiddenTrianglesMethod {
-    FastWindingNumber = 0,
-    RaycastOcclusionTest = 1,
-    EGeometryScriptRemoveHiddenTrianglesMethod_MAX = 2,
-};
-
-enum class EGeometryScriptRepairMeshMode {
-    DeleteOnly = 0,
-    RepairOrDelete = 1,
-    RepairOrSkip = 2,
-    EGeometryScriptRepairMeshMode_MAX = 3,
-};
-
-enum class EGeometryScriptSamplingWeightMode {
-    WeightToRadius = 0,
-    FilledWeightToRadius = 1,
-    WeightedRandom = 2,
-    EGeometryScriptSamplingWeightMode_MAX = 3,
-};
-
-enum class EGeometryScriptSamplingDistributionMode {
-    Uniform = 0,
-    Smaller = 1,
-    Larger = 2,
-    EGeometryScriptSamplingDistributionMode_MAX = 3,
-};
-
-enum class EGeometryScriptTopologyConnectionType {
-    Geometric = 0,
-    Polygroup = 1,
-    MaterialID = 2,
-    EGeometryScriptTopologyConnectionType_MAX = 3,
-};
-
-enum class EGeometryScriptRemoveMeshSimplificationType {
-    StandardQEM = 0,
-    VolumePreserving = 1,
-    AttributeAware = 2,
-    EGeometryScriptRemoveMeshSimplificationType_MAX = 3,
-};
-
-enum class ESelectiveTessellatePatternType {
-    ConcentricRings = 0,
-    ESelectiveTessellatePatternType_MAX = 1,
-};
-
-enum class EGeometryScriptUVFlattenMethod {
-    ExpMap = 0,
-    Conformal = 1,
-    SpectralConformal = 2,
-    EGeometryScriptUVFlattenMethod_MAX = 3,
-};
-
-enum class EGeometryScriptUVIslandSource {
-    PolyGroups = 0,
-    UVIslands = 1,
-    EGeometryScriptUVIslandSource_MAX = 2,
-};
-
-enum class EGeometryScriptBlurColorMode {
-    Uniform = 0,
-    EdgeLength = 1,
-    CotanWeights = 2,
-    EGeometryScriptBlurColorMode_MAX = 3,
-};
-
-enum class EGeometryScriptGridSizingMethod {
-    GridCellSize = 0,
-    GridResolution = 1,
-    EGeometryScriptGridSizingMethod_MAX = 2,
-};
-
-enum class EGeometryScriptMorphologicalOpType {
-    Dilate = 0,
-    Contract = 1,
-    Close = 2,
-    Open = 3,
-    EGeometryScriptMorphologicalOpType_MAX = 4,
-};
-
-enum class EGeometryScriptPolyOffsetJoinType {
-    Square = 0,
-    Round = 1,
-    Miter = 2,
-    EGeometryScriptPolyOffsetJoinType_MAX = 3,
-};
-
-enum class EGeometryScriptPathOffsetEndType {
-    Butt = 0,
-    Square = 1,
-    Round = 2,
-    EGeometryScriptPathOffsetEndType_MAX = 3,
-};
-
-enum class EGeometryScriptSampleSpacing {
-    UniformDistance = 0,
-    UniformTime = 1,
-    ErrorTolerance = 2,
-    EGeometryScriptSampleSpacing_MAX = 3,
-};
-
-enum class EGeometryScriptPixelSamplingMethod {
-    Bilinear = 0,
-    Nearest = 1,
-    EGeometryScriptPixelSamplingMethod_MAX = 2,
-};
-
 enum class ENNEAttributeDataType {
     None = 0,
     Float = 1,
@@ -18064,6 +17835,21 @@ enum class ELiveLinkSourceMode {
     EngineTime = 1,
     Timecode = 2,
     ELiveLinkSourceMode_MAX = 3,
+};
+
+enum class ERCProtocolBinding {
+    Added = 0,
+    Removed = 1,
+    ERCProtocolBinding_MAX = 2,
+};
+
+enum class ERCMask {
+    NoMask = 0,
+    MaskA = 1,
+    MaskB = 2,
+    MaskC = 4,
+    MaskD = 8,
+    ERCMask_MAX = 9,
 };
 
 enum class ECalibratedMapPixelOrigin {
@@ -18795,6 +18581,12 @@ enum class ETodTrackType {
     ETodTrackType_MAX = 7,
 };
 
+enum class EStructUtilsResult {
+    Valid = 0,
+    NotValid = 1,
+    EStructUtilsResult_MAX = 2,
+};
+
 enum class EFFXFSR3QualityMode {
     NativeAA = 0,
     Quality = 1,
@@ -18841,6 +18633,33 @@ enum class EGameplayBehaviorInstantiationPolicy {
     ConditionallyInstantiate = 1,
     DontInstantiate = 2,
     EGameplayBehaviorInstantiationPolicy_MAX = 3,
+};
+
+enum class EChaosWeightMapTarget {
+    None = 0,
+    MaxDistance = 1,
+    BackstopDistance = 2,
+    BackstopRadius = 3,
+    AnimDriveStiffness = 4,
+    AnimDriveDamping = 5,
+    TetherStiffness = 6,
+    TetherScale = 7,
+    Drag = 8,
+    Lift = 9,
+    EdgeStiffness = 10,
+    BendingStiffness = 11,
+    AreaStiffness = 12,
+    BucklingStiffness = 13,
+    Pressure = 14,
+    EChaosWeightMapTarget_MAX = 15,
+};
+
+enum class EChaosClothTetherMode {
+    FastTetherFastLength = 0,
+    AccurateTetherFastLength = 1,
+    AccurateTetherAccurateLength = 2,
+    MaxChaosClothTetherMode = 3,
+    EChaosClothTetherMode_MAX = 4,
 };
 
 enum class EHoudiniStaticMeshMethod {
@@ -19518,15 +19337,6 @@ enum class EUDLSSMode {
     UDLSSMode_MAX = 8,
 };
 
-enum class EUdpMessageFormat {
-    None = 0,
-    Json = 1,
-    TaggedProperty = 2,
-    CborPlatformEndianness = 3,
-    CborStandardEndianness = 4,
-    EUdpMessageFormat_MAX = 5,
-};
-
 enum class EStreamlineSettingOverride {
     Enabled = 0,
     Disabled = 1,
@@ -19803,128 +19613,444 @@ enum class EDynamicMeshAttributeChangeFlags {
     EDynamicMeshAttributeChangeFlags_MAX = 33,
 };
 
-enum class EBakeTextureResolution {
-    Resolution16 = 16,
-    Resolution32 = 32,
-    Resolution64 = 64,
-    Resolution128 = 128,
-    Resolution256 = 256,
-    Resolution512 = 512,
-    Resolution1024 = 1024,
-    Resolution2048 = 2048,
-    Resolution4096 = 4096,
-    Resolution8192 = 8192,
-    EBakeTextureResolution_MAX = 8193,
+enum class EGeometryScriptOutcomePins {
+    Failure = 0,
+    Success = 1,
+    EGeometryScriptOutcomePins_MAX = 2,
 };
 
-enum class EBakeTextureBitDepth {
+enum class EGeometryScriptSearchOutcomePins {
+    Found = 0,
+    NotFound = 1,
+    EGeometryScriptSearchOutcomePins_MAX = 2,
+};
+
+enum class EGeometryScriptContainmentOutcomePins {
+    Inside = 0,
+    Outside = 1,
+    EGeometryScriptContainmentOutcomePins_MAX = 2,
+};
+
+enum class EGeometryScriptLODType {
+    MaxAvailable = 0,
+    HiResSourceModel = 1,
+    SourceModel = 2,
+    RenderData = 3,
+    EGeometryScriptLODType_MAX = 4,
+};
+
+enum class EGeometryScriptAxis {
+    X = 0,
+    Y = 1,
+    Z = 2,
+    EGeometryScriptAxis_MAX = 3,
+};
+
+enum class EGeometryScriptIndexType {
+    Any = 0,
+    Triangle = 1,
+    Vertex = 2,
+    MaterialID = 3,
+    PolygroupID = 4,
+    EGeometryScriptIndexType_MAX = 5,
+};
+
+enum class EGeometryScriptDebugMessageType {
+    ErrorMessage = 0,
+    WarningMessage = 1,
+    EGeometryScriptDebugMessageType_MAX = 2,
+};
+
+enum class EGeometryScriptErrorType {
+    NoError = 0,
+    UnknownError = 1,
+    InvalidInputs = 2,
+    OperationFailed = 3,
+    EGeometryScriptErrorType_MAX = 4,
+};
+
+enum class EGeometryScriptCollisionGenerationMethod {
+    AlignedBoxes = 0,
+    OrientedBoxes = 1,
+    MinimalSpheres = 2,
+    Capsules = 3,
+    ConvexHulls = 4,
+    SweptHulls = 5,
+    MinVolumeShapes = 6,
+    EGeometryScriptCollisionGenerationMethod_MAX = 7,
+};
+
+enum class EGeometryScriptSweptHullAxis {
+    X = 0,
+    Y = 1,
+    Z = 2,
+    SmallestBoxDimension = 3,
+    SmallestVolume = 4,
+    EGeometryScriptSweptHullAxis_MAX = 5,
+};
+
+enum class EGeometryScriptMeshSelectionType {
+    Vertices = 0,
+    Triangles = 1,
+    Polygroups = 2,
+    EGeometryScriptMeshSelectionType_MAX = 3,
+};
+
+enum class EGeometryScriptMeshSelectionConversionType {
+    NoConversion = 0,
+    ToVertices = 1,
+    ToTriangles = 2,
+    ToPolygroups = 3,
+    EGeometryScriptMeshSelectionConversionType_MAX = 4,
+};
+
+enum class EGeometryScriptCombineSelectionMode {
+    Add = 0,
+    Subtract = 1,
+    Intersection = 2,
+    EGeometryScriptCombineSelectionMode_MAX = 3,
+};
+
+enum class EGeometryScriptEmptySelectionBehavior {
+    FullMeshSelection = 0,
+    EmptySelection = 1,
+    EGeometryScriptEmptySelectionBehavior_MAX = 2,
+};
+
+enum class EGeometryScriptBakeResolution {
+    Resolution16 = 0,
+    Resolution32 = 1,
+    Resolution64 = 2,
+    Resolution128 = 3,
+    Resolution256 = 4,
+    Resolution512 = 5,
+    Resolution1024 = 6,
+    Resolution2048 = 7,
+    Resolution4096 = 8,
+    Resolution8192 = 9,
+    EGeometryScriptBakeResolution_MAX = 10,
+};
+
+enum class EGeometryScriptBakeBitDepth {
     ChannelBits8 = 0,
     ChannelBits16 = 1,
-    EBakeTextureBitDepth_MAX = 2,
+    EGeometryScriptBakeBitDepth_MAX = 2,
 };
 
-enum class EBakeTextureSamplesPerPixel {
-    Sample1 = 1,
-    Sample4 = 4,
-    Sample16 = 16,
-    Sample64 = 64,
-    Sample256 = 256,
-    EBakeTextureSamplesPerPixel_MAX = 257,
+enum class EGeometryScriptBakeSamplesPerPixel {
+    Sample1 = 0,
+    Sample4 = 1,
+    Sample16 = 2,
+    Sample64 = 3,
+    Samples256 = 4,
+    EGeometryScriptBakeSamplesPerPixel_MAX = 5,
 };
 
-enum class EGeometrySelectionElementType {
-    Vertex = 1,
-    Edge = 2,
-    Face = 4,
-    EGeometrySelectionElementType_MAX = 5,
+enum class EGeometryScriptBakeFilteringType {
+    BSpline = 0,
+    Box = 1,
+    EGeometryScriptBakeFilteringType_MAX = 2,
 };
 
-enum class EGeometrySelectionTopologyType {
-    Triangle = 1,
-    Polygroup = 2,
-    EGeometrySelectionTopologyType_MAX = 3,
+enum class EGeometryScriptBakeTypes {
+    TangentSpaceNormal = 0,
+    ObjectSpaceNormal = 1,
+    FaceNormal = 2,
+    BentNormal = 3,
+    Position = 4,
+    Curvature = 5,
+    AmbientOcclusion = 6,
+    Texture = 7,
+    MultiTexture = 8,
+    VertexColor = 9,
+    MaterialID = 10,
+    EGeometryScriptBakeTypes_MAX = 11,
 };
 
-enum class EBaseCreateFromSelectedTargetType {
-    NewObject = 0,
-    FirstInputObject = 1,
-    LastInputObject = 2,
-    EBaseCreateFromSelectedTargetType_MAX = 3,
+enum class EGeometryScriptBakeOutputMode {
+    RGBA = 0,
+    PerChannel = 1,
+    EGeometryScriptBakeOutputMode_MAX = 2,
 };
 
-enum class EUVLayoutPreviewSide {
-    Left = 0,
-    Right = 1,
-    EUVLayoutPreviewSide_MAX = 2,
+enum class EGeometryScriptBakeNormalSpace {
+    Tangent = 0,
+    Object = 1,
+    EGeometryScriptBakeNormalSpace_MAX = 2,
 };
 
-enum class ESpaceCurveControlPointTransformMode {
-    Shared = 0,
-    PerVertex = 1,
-    ESpaceCurveControlPointTransformMode_MAX = 2,
+enum class EGeometryScriptBakeCurvatureTypeMode {
+    Mean = 0,
+    Max = 1,
+    Min = 2,
+    Gaussian = 3,
+    EGeometryScriptBakeCurvatureTypeMode_MAX = 4,
 };
 
-enum class ESpaceCurveControlPointOriginMode {
-    Shared = 0,
-    First = 1,
-    Last = 2,
-    ESpaceCurveControlPointOriginMode_MAX = 3,
+enum class EGeometryScriptBakeCurvatureColorMode {
+    Grayscale = 0,
+    RedBlue = 1,
+    RedGreenBlue = 2,
+    EGeometryScriptBakeCurvatureColorMode_MAX = 3,
 };
 
-enum class ESpaceCurveControlPointFalloffType {
-    Linear = 0,
-    Smooth = 1,
-    ESpaceCurveControlPointFalloffType_MAX = 2,
+enum class EGeometryScriptBakeCurvatureClampMode {
+    None = 0,
+    OnlyPositive = 1,
+    OnlyNegative = 2,
+    EGeometryScriptBakeCurvatureClampMode_MAX = 3,
 };
 
-enum class EModelingComponentsPlaneVisualizationMode {
-    SimpleGrid = 0,
-    HierarchicalGrid = 1,
-    FixedScreenAreaGrid = 2,
-    EModelingComponentsPlaneVisualizationMode_MAX = 3,
+enum class EGeometryScriptCombineAttributesMode {
+    EnableAllMatching = 0,
+    UseTarget = 1,
+    UseSource = 2,
+    EGeometryScriptCombineAttributesMode_MAX = 3,
 };
 
-enum class ECreateModelingObjectResult {
-    Ok = 0,
-    Cancelled = 1,
-    Failed_Unknown = 2,
-    Failed_NoAPIFound = 3,
-    Failed_InvalidWorld = 4,
-    Failed_InvalidMesh = 5,
-    Failed_InvalidTexture = 6,
-    Failed_AssetCreationFailed = 7,
-    Failed_ActorCreationFailed = 8,
-    Failed_InvalidMaterial = 9,
-    ECreateModelingObjectResult_MAX = 10,
+enum class EGeometryScriptSmoothBoneWeightsType {
+    DirectDistance = 0,
+    GeodesicVoxel = 1,
+    EGeometryScriptSmoothBoneWeightsType_MAX = 2,
 };
 
-enum class ECreateMeshObjectSourceMeshType {
-    MeshDescription = 0,
-    DynamicMesh = 1,
-    ECreateMeshObjectSourceMeshType_MAX = 2,
+enum class ETransferBoneWeightsMethod {
+    ClosestPointOnSurface = 0,
+    InpaintWeights = 1,
+    ETransferBoneWeightsMethod_MAX = 2,
 };
 
-enum class ECreateObjectTypeHint {
-    Undefined = 0,
-    StaticMesh = 1,
-    Volume = 2,
-    DynamicMeshActor = 3,
-    ECreateObjectTypeHint_MAX = 4,
+enum class EOutputTargetMeshBones {
+    SourceBones = 0,
+    TargetBones = 1,
+    EOutputTargetMeshBones_MAX = 2,
 };
 
-enum class EHandleSourcesMethod {
-    DeleteSources = 0,
-    HideSources = 1,
-    KeepSources = 2,
-    KeepFirstSource = 3,
-    KeepLastSource = 4,
-    EHandleSourcesMethod_MAX = 5,
+enum class EGeometryScriptBooleanOperation {
+    Union = 0,
+    Intersection = 1,
+    Subtract = 2,
+    EGeometryScriptBooleanOperation_MAX = 3,
 };
 
-enum class EMultiTransformerMode {
-    DefaultGizmo = 1,
-    QuickAxisTranslation = 2,
-    EMultiTransformerMode_MAX = 3,
+enum class EGeometryScriptFlareType {
+    SinMode = 0,
+    SinSquaredMode = 1,
+    TriangleMode = 2,
+    EGeometryScriptFlareType_MAX = 3,
+};
+
+enum class EGeometryScriptMathWarpType {
+    SinWave1D = 0,
+    SinWave2D = 1,
+    SinWave3D = 2,
+    EGeometryScriptMathWarpType_MAX = 3,
+};
+
+enum class EGeometryScriptMeshEditPolygroupMode {
+    PreserveExisting = 0,
+    AutoGenerateNew = 1,
+    SetConstant = 2,
+    EGeometryScriptMeshEditPolygroupMode_MAX = 3,
+};
+
+enum class EGeometryScriptPolyOperationArea {
+    EntireSelection = 0,
+    PerPolygroup = 1,
+    PerTriangle = 2,
+    EGeometryScriptPolyOperationArea_MAX = 3,
+};
+
+enum class EGeometryScriptLinearExtrudeDirection {
+    FixedDirection = 0,
+    AverageFaceNormal = 1,
+    EGeometryScriptLinearExtrudeDirection_MAX = 2,
+};
+
+enum class EGeometryScriptOffsetFacesType {
+    VertexNormal = 0,
+    FaceNormal = 1,
+    ParallelFaceOffset = 2,
+    EGeometryScriptOffsetFacesType_MAX = 3,
+};
+
+enum class EGeometryScriptMeshBevelSelectionMode {
+    TriangleArea = 0,
+    AllPolygroupEdges = 1,
+    SharedPolygroupEdges = 2,
+    EGeometryScriptMeshBevelSelectionMode_MAX = 3,
+};
+
+enum class EGeometryScriptTangentTypes {
+    FastMikkT = 0,
+    PerTriangle = 1,
+    EGeometryScriptTangentTypes_MAX = 2,
+};
+
+enum class EGeometryScriptPrimitivePolygroupMode {
+    SingleGroup = 0,
+    PerFace = 1,
+    PerQuad = 2,
+    EGeometryScriptPrimitivePolygroupMode_MAX = 3,
+};
+
+enum class EGeometryScriptPrimitiveOriginMode {
+    Center = 0,
+    Base = 1,
+    EGeometryScriptPrimitiveOriginMode_MAX = 2,
+};
+
+enum class EGeometryScriptPrimitiveUVMode {
+    Uniform = 0,
+    ScaleToFill = 1,
+    EGeometryScriptPrimitiveUVMode_MAX = 2,
+};
+
+enum class EGeometryScriptPolygonFillMode {
+    All = 0,
+    Solid = 1,
+    PositiveWinding = 2,
+    NonZeroWinding = 3,
+    NegativeWinding = 4,
+    OddWinding = 5,
+    EGeometryScriptPolygonFillMode_MAX = 6,
+};
+
+enum class EGeometryScriptUniformRemeshTargetType {
+    TriangleCount = 0,
+    TargetEdgeLength = 1,
+    EGeometryScriptUniformRemeshTargetType_MAX = 2,
+};
+
+enum class EGeometryScriptRemeshEdgeConstraintType {
+    Fixed = 0,
+    Refine = 1,
+    Free = 2,
+    Ignore = 3,
+    EGeometryScriptRemeshEdgeConstraintType_MAX = 4,
+};
+
+enum class EGeometryScriptRemeshSmoothingType {
+    Uniform = 0,
+    UVPreserving = 1,
+    Mixed = 2,
+    EGeometryScriptRemeshSmoothingType_MAX = 3,
+};
+
+enum class EGeometryScriptFillHolesMethod {
+    Automatic = 0,
+    MinimalFill = 1,
+    PolygonTriangulation = 2,
+    TriangleFan = 3,
+    PlanarProjection = 4,
+    EGeometryScriptFillHolesMethod_MAX = 5,
+};
+
+enum class EGeometryScriptRemoveHiddenTrianglesMethod {
+    FastWindingNumber = 0,
+    RaycastOcclusionTest = 1,
+    EGeometryScriptRemoveHiddenTrianglesMethod_MAX = 2,
+};
+
+enum class EGeometryScriptRepairMeshMode {
+    DeleteOnly = 0,
+    RepairOrDelete = 1,
+    RepairOrSkip = 2,
+    EGeometryScriptRepairMeshMode_MAX = 3,
+};
+
+enum class EGeometryScriptSamplingWeightMode {
+    WeightToRadius = 0,
+    FilledWeightToRadius = 1,
+    WeightedRandom = 2,
+    EGeometryScriptSamplingWeightMode_MAX = 3,
+};
+
+enum class EGeometryScriptSamplingDistributionMode {
+    Uniform = 0,
+    Smaller = 1,
+    Larger = 2,
+    EGeometryScriptSamplingDistributionMode_MAX = 3,
+};
+
+enum class EGeometryScriptTopologyConnectionType {
+    Geometric = 0,
+    Polygroup = 1,
+    MaterialID = 2,
+    EGeometryScriptTopologyConnectionType_MAX = 3,
+};
+
+enum class EGeometryScriptRemoveMeshSimplificationType {
+    StandardQEM = 0,
+    VolumePreserving = 1,
+    AttributeAware = 2,
+    EGeometryScriptRemoveMeshSimplificationType_MAX = 3,
+};
+
+enum class ESelectiveTessellatePatternType {
+    ConcentricRings = 0,
+    ESelectiveTessellatePatternType_MAX = 1,
+};
+
+enum class EGeometryScriptUVFlattenMethod {
+    ExpMap = 0,
+    Conformal = 1,
+    SpectralConformal = 2,
+    EGeometryScriptUVFlattenMethod_MAX = 3,
+};
+
+enum class EGeometryScriptUVIslandSource {
+    PolyGroups = 0,
+    UVIslands = 1,
+    EGeometryScriptUVIslandSource_MAX = 2,
+};
+
+enum class EGeometryScriptBlurColorMode {
+    Uniform = 0,
+    EdgeLength = 1,
+    CotanWeights = 2,
+    EGeometryScriptBlurColorMode_MAX = 3,
+};
+
+enum class EGeometryScriptGridSizingMethod {
+    GridCellSize = 0,
+    GridResolution = 1,
+    EGeometryScriptGridSizingMethod_MAX = 2,
+};
+
+enum class EGeometryScriptMorphologicalOpType {
+    Dilate = 0,
+    Contract = 1,
+    Close = 2,
+    Open = 3,
+    EGeometryScriptMorphologicalOpType_MAX = 4,
+};
+
+enum class EGeometryScriptPolyOffsetJoinType {
+    Square = 0,
+    Round = 1,
+    Miter = 2,
+    EGeometryScriptPolyOffsetJoinType_MAX = 3,
+};
+
+enum class EGeometryScriptPathOffsetEndType {
+    Butt = 0,
+    Square = 1,
+    Round = 2,
+    EGeometryScriptPathOffsetEndType_MAX = 3,
+};
+
+enum class EGeometryScriptSampleSpacing {
+    UniformDistance = 0,
+    UniformTime = 1,
+    ErrorTolerance = 2,
+    EGeometryScriptSampleSpacing_MAX = 3,
+};
+
+enum class EGeometryScriptPixelSamplingMethod {
+    Bilinear = 0,
+    Nearest = 1,
+    EGeometryScriptPixelSamplingMethod_MAX = 2,
 };
 
 enum class EMakeMeshPlacementType {
@@ -20169,6 +20295,25 @@ enum class EUVProjectionToolInitializationMode {
     EUVProjectionToolInitializationMode_MAX = 4,
 };
 
+enum class EPhysicsControlType {
+    WorldSpace = 0,
+    ParentSpace = 1,
+    EPhysicsControlType_MAX = 2,
+};
+
+enum class EResetToCachedTargetBehavior {
+    ResetImmediately = 0,
+    ResetDuringUpdateControls = 1,
+    EResetToCachedTargetBehavior_MAX = 2,
+};
+
+enum class EPhysicsMovementType {
+    Static = 0,
+    Kinematic = 1,
+    Simulated = 2,
+    EPhysicsMovementType_MAX = 3,
+};
+
 enum class EXeSSQualityMode {
     Off = 0,
     UltraPerformance = 1,
@@ -20258,21 +20403,6 @@ enum class ESteeringType {
     ESteeringType_MAX = 3,
 };
 
-enum class ERCProtocolBinding {
-    Added = 0,
-    Removed = 1,
-    ERCProtocolBinding_MAX = 2,
-};
-
-enum class ERCMask {
-    NoMask = 0,
-    MaskA = 1,
-    MaskB = 2,
-    MaskC = 4,
-    MaskD = 8,
-    ERCMask_MAX = 9,
-};
-
 enum class ERCTransactionMode {
     NONE = 0,
     AUTOMATIC = 1,
@@ -20335,6 +20465,19 @@ enum class ERCBehaviourConditionType {
     Else = 5,
     None = 6,
     ERCBehaviourConditionType_MAX = 7,
+};
+
+enum class EDaggerCharacterType {
+    Dagger = 0,
+    Cloak = 1,
+    EDaggerCharacterType_MAX = 2,
+};
+
+enum class EAbilityState_102571 {
+    Inactive = 0,
+    Resting = 1,
+    Flying = 2,
+    EAbilityState_MAX = 3,
 };
 
 enum class ERemoteControlEvent {
@@ -20456,6 +20599,21 @@ enum class EGLTFMaterialPropertyGroup {
     ClearCoatRoughness = 6,
     ClearCoatBottomNormal = 7,
     EGLTFMaterialPropertyGroup_MAX = 8,
+};
+
+enum class EProjectileConductState {
+    Default = 0,
+    Normal = 1,
+    Conduct = 2,
+    Absorbed = 3,
+    EProjectileConductState_MAX = 4,
+};
+
+enum class ETargetTypeWeight {
+    Default = 0,
+    Conducted = 1000,
+    Anka = 10000,
+    ETargetTypeWeight_MAX = 10001,
 };
 
 enum class EInterchangeFactoryAssetType {
@@ -20588,13 +20746,6 @@ enum class EInterchangePipelineConfigurationDialogResult {
     EInterchangePipelineConfigurationDialogResult_MAX = 3,
 };
 
-enum class EInterchangeSkeletalMeshContentType {
-    All = 0,
-    Geometry = 1,
-    SkinningWeights = 2,
-    MAX = 3,
-};
-
 enum class EMaterialXLuminanceMode {
     ACEScg = 0,
     Rec709 = 1,
@@ -20618,42 +20769,6 @@ enum class EMAterialXTextureSampleBlurKernel {
     EMAterialXTextureSampleBlurKernel_MAX = 4,
 };
 
-enum class EInterchangeForceMeshType {
-    IFMT_None = 0,
-    IFMT_StaticMesh = 1,
-    IFMT_SkeletalMesh = 2,
-    IFMT_MAX = 3,
-};
-
-enum class EInterchangeVertexColorImportOption {
-    IVCIO_Replace = 0,
-    IVCIO_Ignore = 1,
-    IVCIO_Override = 2,
-    IVCIO_MAX = 3,
-};
-
-enum class EInterchangeMaterialXShaders {
-    StandardSurface = 0,
-    StandardSurfaceTransmission = 1,
-    SurfaceUnlit = 2,
-    UsdPreviewSurface = 3,
-    MaxShaderCount = 4,
-    EInterchangeMaterialXShaders_MAX = 5,
-};
-
-enum class EInterchangeAnimationRange {
-    Timeline = 0,
-    Animated = 1,
-    SetRange = 2,
-    MAX = 3,
-};
-
-enum class EInterchangeMaterialImportOption {
-    ImportAsMaterials = 0,
-    ImportAsMaterialInstances = 1,
-    EInterchangeMaterialImportOption_MAX = 2,
-};
-
 enum class EMediaPlateEventState {
     Play = 0,
     Open = 1,
@@ -20663,6 +20778,15 @@ enum class EMediaPlateEventState {
     Forward = 5,
     Rewind = 6,
     MAX = 7,
+};
+
+enum class EUdpMessageFormat {
+    None = 0,
+    Json = 1,
+    TaggedProperty = 2,
+    CborPlatformEndianness = 3,
+    CborStandardEndianness = 4,
+    EUdpMessageFormat_MAX = 5,
 };
 
 enum class ECollectionScriptingShareType {
@@ -20680,6 +20804,13 @@ enum class ELocationAccuracy {
     LA_Best = 4,
     LA_Navigation = 5,
     LA_MAX = 6,
+};
+
+enum class PyWidget_Common_InputEInputType {
+    NormalInput = 0,
+    SearchInput = 1,
+    PasswordInput = 2,
+    EInputType_MAX = 3,
 };
 
 enum class ERaQualityMode {
@@ -21157,112 +21288,6 @@ enum class ECLIMBSTATE {
     CLIMBSTATE_MAX = 3,
 };
 
-enum class EAbilityState_101651 {
-    Position = 0,
-    Run = 1,
-    Invisiable = 2,
-    EAbilityState_MAX = 3,
-};
-
-enum class ERotateAudioControl {
-    INIT = 0,
-    PLAY_START_AUDIO = 1,
-    PLAY_LOOP_AUDIO = 2,
-    STOP_LOOP_AUDIO = 3,
-    ERotateAudioControl_MAX = 4,
-};
-
-enum class EHealthStatus {
-    StronglyHealthy = 0,
-    SlightlyHurt = 1,
-    BadlyWounded = 2,
-    AlmostDying = 3,
-    Initial = 4,
-    EHealthStatus_MAX = 5,
-};
-
-enum class EVisibleStatus {
-    Initial = 0,
-    Obscured = 1,
-    Visible = 2,
-    EVisibleStatus_MAX = 3,
-};
-
-enum class EZiplineLaunchState {
-    Initial = 0,
-    Launching = 1,
-    Hooked = 2,
-    Deprecated = 3,
-    EZiplineLaunchState_MAX = 4,
-};
-
-enum class EZiplineLaunchResult {
-    Unknown = 0,
-    Success = 1,
-    Fail_NoPlaceToSetup = 2,
-    Fail_DistanceTooClose = 3,
-    Fail_DistanceTooFar = 4,
-    Fail_UnhookableSlope = 5,
-    Fail_UnhookableType = 6,
-    EZiplineLaunchResult_MAX = 7,
-};
-
-enum class EZiplineSlideDirection {
-    Forward = 0,
-    Backward = 1,
-    EZiplineSlideDirection_MAX = 2,
-};
-
-enum class EZiplineSlideState {
-    Idle = 0,
-    Sliding = 1,
-    Hanging = 2,
-    EZiplineSlideState_MAX = 3,
-};
-
-enum class EAbilityStage_101451 {
-    Inactive = 0,
-    Foreswing = 1,
-    Launching = 2,
-    Backswing = 3,
-    EAbilityStage_MAX = 4,
-};
-
-enum class EAbilityStage_101452 {
-    Inactive = 0,
-    Foreswing = 1,
-    Sliding = 2,
-    Hanging = 3,
-    Backswing = 4,
-    EAbilityStage_MAX = 5,
-};
-
-enum class EPunisherSlideFinishResult {
-    ReachEnd = 0,
-    PressJump = 1,
-    Cancelled = 2,
-    Collision = 3,
-    EPunisherSlideFinishResult_MAX = 4,
-};
-
-enum class EState_101481 {
-    Normal = 0,
-    Entering = 1,
-    EnteringEquip = 2,
-    Entered = 3,
-    Outing = 4,
-    OutingUnEquip = 5,
-    Finish = 6,
-    EState_MAX = 7,
-};
-
-enum class EState_101482 {
-    InActive = 0,
-    Active = 1,
-    ActiveBreak = 2,
-    EState_MAX = 3,
-};
-
 enum class EStormCharState {
     CharacterState = 0,
     SelectionRegionState = 1,
@@ -21309,6 +21334,13 @@ enum class EComboState_104011 {
     Right = 2,
     Double = 3,
     EComboState_MAX = 4,
+};
+
+enum class EAbilityState_101651 {
+    Position = 0,
+    Run = 1,
+    Invisiable = 2,
+    EAbilityState_MAX = 3,
 };
 
 enum class EFlameStage {
@@ -21436,87 +21468,36 @@ enum class EWallPushMethod {
     EWallPushMethod_MAX = 5,
 };
 
-enum class ESpawnState {
-    Inactive = 0,
-    Flying = 1,
-    Active = 2,
-    PreSpawn = 3,
-    Spawning = 4,
-    SpawnFinished = 5,
-    SpawnAborted = 6,
-    Disappearing = 7,
-    ESpawnState_MAX = 8,
+enum class EIronRecoverType {
+    NatualRecover = 0,
+    ShieldRecover = 1,
+    PhysicsSummonerRecover = 2,
+    None = 3,
+    EIronRecoverType_MAX = 4,
 };
 
-enum class ERacoonGrootAbilityState {
-    FlyingToGroot = 0,
-    FlyingToGrootFailed = 1,
-    AttachToGroot = 2,
-    DetachFromGroot = 3,
-    NoCoop = 4,
-    ERacoonGrootAbilityState_MAX = 5,
+enum class ESplineCueStatus_103701 {
+    Start = 0,
+    Loop = 1,
+    None = 2,
+    ESplineCueStatus_MAX = 3,
 };
 
-enum class EState_10232201 {
-    Hit = 0,
-    Bounce = 1,
-    Normal = 2,
-    EState_MAX = 3,
-};
-
-enum class ESummonedType_102341 {
-    ArmorPack = 0,
-    RocketBoots = 1,
-    ESummonedType_MAX = 2,
-};
-
-enum class ERacoonGrootAttachLockCameraYawState {
-    NoLock = 0,
-    LockOnAttach = 1,
-    LockOnFire = 2,
-    ERacoonGrootAttachLockCameraYawState_MAX = 3,
-};
-
-enum class ERacoonGrootLockCameraYawTarget {
-    Raccoon = 0,
-    Groot = 1,
-    ERacoonGrootLockCameraYawTarget_MAX = 2,
-};
-
-enum class ERushState_102331 {
+enum class EManipulateActorType {
     None = 0,
-    Start = 1,
-    End = 2,
-    ERushState_MAX = 3,
+    Entity = 1,
+    MagicEntity = 2,
+    MagicNoEntity = 3,
+    FastFalling = 4,
+    EManipulateActorType_MAX = 5,
 };
 
-enum class EWallRunSide {
-    Unknown = 0,
-    Left = 1,
-    Right = 2,
-    Free = 3,
-    EWallRunSide_MAX = 4,
-};
-
-enum class EWallRunCapsuleShape {
-    Unknown = 0,
-    Sphered = 1,
-    Capsuling = 2,
-    Capsuled = 3,
-    EWallRunCapsuleShape_MAX = 4,
-};
-
-enum class EDaggerCharacterType {
-    Dagger = 0,
-    Cloak = 1,
-    EDaggerCharacterType_MAX = 2,
-};
-
-enum class EAbilityState_102571 {
-    Inactive = 0,
-    Resting = 1,
-    Flying = 2,
-    EAbilityState_MAX = 3,
+enum class ERingState {
+    StateIdle = 0,
+    StateOne = 1,
+    StateTwo = 2,
+    StateFull = 3,
+    ERingState_MAX = 4,
 };
 
 enum class ERush_State_102661 {
@@ -21525,21 +21506,6 @@ enum class ERush_State_102661 {
     End = 2,
     None = 3,
     ERush_State_MAX = 4,
-};
-
-enum class EProjectileConductState {
-    Default = 0,
-    Normal = 1,
-    Conduct = 2,
-    Absorbed = 3,
-    EProjectileConductState_MAX = 4,
-};
-
-enum class ETargetTypeWeight {
-    Default = 0,
-    Conducted = 1000,
-    Anka = 10000,
-    ETargetTypeWeight_MAX = 10001,
 };
 
 enum class ESkatingState {
@@ -21866,6 +21832,53 @@ enum class EAbilityState_104861 {
     Attack = 3,
     End = 4,
     EAbilityState_MAX = 5,
+};
+
+enum class EAbilityStatus_104981 {
+    NONE = 0,
+    Raising = 1,
+    WaitingToConfirm = 2,
+    Dashing = 3,
+    EndState = 4,
+    CollideKnockDown = 5,
+    EAbilityStatus_MAX = 6,
+};
+
+enum class ERushState_104951 {
+    Start_104951 = 0,
+    Loop_104951 = 1,
+    End_104951 = 2,
+    None_104951 = 3,
+    ERushState_MAX = 4,
+};
+
+enum class EWolverineSynergyState {
+    FlyingToTarget = 0,
+    FlyingToTargetFailed = 1,
+    AttachToTarget = 2,
+    DetachFromTarget = 3,
+    NoCoop = 4,
+    EWolverineSynergyState_MAX = 5,
+};
+
+enum class EBindReduceCDMethod_104901 {
+    JoinKill = 0,
+    DirectKill = 1,
+    EBindReduceCDMethod_MAX = 2,
+};
+
+enum class ERushState_104971 {
+    Start_104971 = 0,
+    Loop_104971 = 1,
+    End_104971 = 2,
+    None_104971 = 3,
+    ERushState_MAX = 4,
+};
+
+enum class ETriggerSpecialLeftTime {
+    OnActivated = 0,
+    OnEnterEndState = 1,
+    ETriggerSpecialLeftTime_MAX = 2,
 };
 
 enum class EScopeEnableType_105071 {
@@ -23021,17 +23034,25 @@ enum class EWeChatStatus {
     EWeChatStatus_MAX = 3,
 };
 
-enum class EChatCustomMsgType {
-    NONE = 0,
-    SURRENDER = 11,
-    EChatCustomMsgType_MAX = 12,
-};
-
 enum class EBattleHUDScaleMode {
     Defualt = 0,
     Small = 1,
     Large = 2,
     EBattleHUDScaleMode_MAX = 3,
+};
+
+enum class ETrainingState {
+    Pending = 0,
+    Prepareing = 1,
+    Training = 2,
+    Result = 3,
+    ETrainingState_MAX = 4,
+};
+
+enum class EAbilityEndStage_105071 {
+    OnMontageEnd = 1,
+    OnFieldEndTask = 2,
+    EAbilityEndStage_MAX = 3,
 };
 
 enum class EBindKillMethod {
@@ -23042,18 +23063,13 @@ enum class EBindKillMethod {
     EBindKillMethod_MAX = 4,
 };
 
-enum class EBTD_GameModeType {
-    Control = 0,
-    Escort = 1,
-    Hybrid = 2,
-    ArcadeDeath = 3,
-    EBTD_MAX = 4,
-};
-
-enum class EAbilityEndStage_105071 {
-    OnMontageEnd = 1,
-    OnFieldEndTask = 2,
-    EAbilityEndStage_MAX = 3,
+enum class EAngle {
+    UnKnow = 0,
+    RightBottom = 1,
+    LeftTop = 2,
+    LeftBottom = 3,
+    RightTop = 4,
+    EAngle_MAX = 5,
 };
 
 enum class ECreditLevel {
@@ -23092,21 +23108,6 @@ enum class Enum_Common_BtnStyle {
     Enum_Common_MAX = 7,
 };
 
-enum class EVideoState {
-    MarvelLogo = 0,
-    LoginLoop = 1,
-    Transition = 2,
-    LobbyLoop = 3,
-    EVideoState_MAX = 4,
-};
-
-enum class PyWidget_Common_InputEInputType {
-    NormalInput = 0,
-    SearchInput = 1,
-    PasswordInput = 2,
-    EInputType_MAX = 3,
-};
-
 enum class EFilterRule {
     Random = 0,
     Farthest_Manhattan = 1,
@@ -23116,12 +23117,11 @@ enum class EFilterRule {
     EFilterRule_MAX = 5,
 };
 
-enum class EAngle {
-    UnKnow = 0,
-    RightBottom = 1,
-    LeftTop = 2,
-    LeftBottom = 3,
-    RightTop = 4,
-    EAngle_MAX = 5,
+enum class EBTD_GameModeType {
+    Control = 0,
+    Escort = 1,
+    Hybrid = 2,
+    ArcadeDeath = 3,
+    EBTD_MAX = 4,
 };
 
